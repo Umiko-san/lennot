@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "node index.js"
   },
   "description": "ExpressApp24",
   "author": {
@@ -24,3 +24,5 @@
     "xml2js": "^0.4.19"
   }
 }
+
+/*"start": "node app" => "start": "node index.js"*/
