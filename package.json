@@ -24,5 +24,3 @@
     "xml2js": "^0.4.19"
   }
 }
-
-/*"start": "node app" => "start": "node index.js"*/
