@@ -49,6 +49,7 @@
     </Compile>
     <Compile Include="routes\index.js" />
     <Content Include="package.json" />
+    <Content Include="Procfile" />
     <Content Include="public\stylesheets\airline.css">
       <SubType>Code</SubType>
     </Content>
