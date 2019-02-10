@@ -10,13 +10,11 @@
     "name": ""
   },
   "dependencies": {
-    "async-request": "^1.2.0",
     "body-parser": "^1.15.0",
     "cookie-parser": "^1.4.0",
     "debug": "^2.2.0",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
-    "node-fetch": "^2.3.0",
     "nodemon": "^1.18.10",
     "pug": "^2.0.0-beta6",
     "request": "^2.88.0",
