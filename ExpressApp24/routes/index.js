@@ -2,7 +2,6 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
-var fetch = require('node-fetch');
 var parseString = require('xml2js').parseString;
 var myResponse = null;
 
