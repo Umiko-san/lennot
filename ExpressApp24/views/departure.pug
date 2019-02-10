@@ -1,0 +1,144 @@
+﻿extends layout
+
+block content
+  head
+    title Bootstrap Example
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.1/css/all.css')
+    link(rel='stylesheet', href='/stylesheets/departure.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js')
+    script.
+      $(document).on('click',function(){
+      $('.collapse').collapse('hide');
+      })
+      function getString(s) { return s.slice(0,2) + "-" + s.slice(3); };
+      function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[1];
+          td2 = tr[i].getElementsByTagName("td")[2];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else if(td2){
+              txtValue = td2.textContent || td2.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            }else {
+               tr[i].style.display = "none";
+            }
+            } else {
+               tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+  body
+    nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+      a.navbar-brand(href='/')
+        i.fas.fa-home  Lennot
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+        span.navbar-toggler-icon
+      #collapsibleNavbar.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='airline') Lentoyhtiöt
+          li.nav-item
+            a.nav-link(href='airport') Lentoasemat
+          li.nav-item
+            a.nav-link(href='contact') Ota yhteyttä
+    br
+    .container.main
+      h3 #{title} lentoaseman lähtevät lennot
+      p
+        | In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+      p Only when the button is clicked, the navigation bar will be displayed.
+      p
+        | Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.
+      p
+        input#myInput(type='text', onkeyup='myFunction()', placeholder='Hae lennon numerolla tai kohteella', title='Type in a name')
+      p
+          .table-responsive
+    table#myTable.table.table-hover
+      tbody
+        td 
+          b Aika
+        td 
+          b Lento
+        td 
+          b Kohde
+        td 
+          b 
+        td 
+          b 
+        td 
+          b 
+        td 
+          b 
+        td
+          b 
+          -var index = 0
+          each flightObj in flightlist
+            tr
+              - var a = new Date(flightObj.sdt[0]).getTime()
+              - var b = new Date(flightObj.est_d[0]).getTime()
+              if b > a
+                td#time
+                  strike(style='color:black')
+                    span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                  p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+              else
+                td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+              td.flight=flightObj.fltnr[0]
+              td#destination=flightObj.route_n_1[0]
+              - var z = flightObj.chkdsk_1[0]
+              - var q = flightObj.chkdsk_2[0]
+              - var o = flightObj.chkarea[0]
+              if o !== "" && o.length === 1
+                td#destination="T" + flightObj.chkarea[0]
+                  details#detail
+                    summary
+                    p Bag drop #{z} - #{q}
+              else if o !== ""
+                td#destination=flightObj.chkarea[0]
+              - var n = flightObj.gate[0]
+              unless n === ""
+                td#gate=flightObj.gate[0]
+              - var m = flightObj.prt_f[0]
+              - var dt2 = new Date(flightObj.ablk_d[0])
+              - var dt1 = new Date(flightObj.sdt[0])
+              - var j = Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24))
+              td.defaultBackground
+                if m === "Arvioitu aika" && j > 0
+                    p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21) + " +" + j
+                else if m === "Arvioitu aika"
+                  if a < b
+                    p#orange=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                  else if a > b
+                    p#green=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                  else
+                    p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                else if m === "Suljettu" || m === "Viimeinen kutsu"
+                    p#orange=flightObj.prt_f[0] 
+                else if m === "Lähdössä" || m === "Portille"
+                    p#green=flightObj.prt_f[0]
+                else if m === "Peruttu"
+                    p#red=flightObj.prt_f[0]
+                else if m !== ""
+                  p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21)
+              td#equipment=flightObj.actype[0]
+              - var x = (flightObj.acreg[0] ? new String(flightObj.acreg[0].substr(0,2) + "-" + flightObj.acreg[0].substr(2)) : "")
+              - var y = (flightObj.acreg[0] ? new String(x.toLowerCase()) : "")
+              td#registration
+                a#linkText(href="https://www.flightradar24.com/data/aircraft/" + y) #{x}
+              td#equipment=flightObj.callsign[0]
+              - index++

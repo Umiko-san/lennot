@@ -1,0 +1,99 @@
+﻿extends layout
+//-
+  value='hel' Helsinki valittuna valmiiksi
+block content
+  head
+    title Bootstrap Example
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.1/css/all.css')
+    link(rel='stylesheet', href='stylesheets/main.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js')
+    script.
+      $(document).on('click',function(){
+      $('.collapse').collapse('hide');
+      })
+      function getString(s) { return s.slice(0,2) + "-" + s.slice(3); };
+  body
+    nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+      a.navbar-brand(href='/')
+        i.fas.fa-home  Lennot
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+        span.navbar-toggler-icon
+      #collapsibleNavbar.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='airline') Lentoyhtiöt
+          li.nav-item
+            a.nav-link(href='airport') Lentoasemat
+          li.nav-item
+            a.nav-link(href='contact') Ota yhteyttä
+    br
+    .container.main
+      br
+      p
+        i.fas.fa-plane-departure#fnt  Lähtevät lennot
+      form.form-inline(method='get', action='/departure/')
+        .form-group.mb-2
+          label Lähtöpaikka: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        .form-group.mx-sm-3.mb-2
+          input.form-control(name='id', list='id', required='', placeholder='Valitse...')
+          datalist#id
+            option(value='enf') Enontekiö EFET
+            option(value='hel') Helsinki-Vantaa EFHK
+            option(value='ivl') Ivalo EFIV
+            option(value='joe') Joensuu EFJO
+            option(value='jyv') Jyväskylä EFJY
+            option(value='kaj') Kajaani EFKI
+            option(value='kem') Kemi-Tornio EFKE
+            option(value='kuo') Kuopio EFKU
+            option(value='ktt') Kittilä EFKT
+            option(value='kok') Kokkola EFKK
+            option(value='kao') Kuusamo EFKS
+            option(value='lpp') Lappeenranta EFLP
+            option(value='mhq') Maarianhamina EFMA
+            option(value='oul') Oulu EFOU
+            option(value='por') Pori EFPO
+            option(value='rvn') Rovaniemi EFRO
+            option(value='svl') Savonlinna EFSA
+            option(value='tmp') Tampere-Pirkkala EFTP
+            option(value='tku') Turku EFTU
+            option(value='vaa') Vaasa EFVA
+        .form-group.mb-2
+          button.btn.btn-primary(type='submit') Näytä Lähtevät&nbsp
+      p #{apierror}
+      p
+        i.fas.fa-plane-arrival#fnt  Saapuvat lennot
+      form.form-inline(method='get', action='/arrival/')
+        .form-group.mb-2
+          label Saapumispaikka:
+        .form-group.mx-sm-3.mb-2
+          input.form-control(name='id', list='id', required='', placeholder='Valitse...')
+          datalist#id
+            option(value='enf') Enontekiö EFET
+            option(value='hel') Helsinki-Vantaa EFHK
+            option(value='ivl') Ivalo EFIV
+            option(value='joe') Joensuu EFJO
+            option(value='jyv') Jyväskylä EFJY
+            option(value='kaj') Kajaani EFKI
+            option(value='kem') Kemi-Tornio EFKE
+            option(value='kuo') Kuopio EFKU
+            option(value='ktt') Kittilä EFKT
+            option(value='kok') Kokkola EFKK
+            option(value='kao') Kuusamo EFKS
+            option(value='lpp') Lappeenranta EFLP
+            option(value='mhq') Maarianhamina EFMA
+            option(value='oul') Oulu EFOU
+            option(value='por') Pori EFPO
+            option(value='rvn') Rovaniemi EFRO
+            option(value='svl') Savonlinna EFSA
+            option(value='tmp') Tampere-Pirkkala EFTP
+            option(value='tku') Turku EFTU
+            option(value='vaa') Vaasa EFVA
+        .form-group.mb-2
+          button.btn.btn-primary(type='submit') Näytä Saapuvat
+      br
+      p #{apierror}

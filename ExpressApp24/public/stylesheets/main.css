@@ -1,0 +1,33 @@
+﻿body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-image: url(../images/finnair_tausta.jpg);
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+
+a {
+    color: #00B7FF;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.main{
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+#fnt {
+    font-size: 18px;
+}
+
+#frmbtn{
+    
+}
+

@@ -1,0 +1,119 @@
+﻿
+body {
+
+}
+
+.defaultBackground {
+    background-color: #0302B5;
+}
+
+#gate {
+    font-size: 3.8vw;
+    color: #000000;
+    background-color: #F5FE3F /*#F5FE3F*/;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main {
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+/*#0302B5 depboard*/
+/*#F5FE3F gate*/
+
+/*fonts*/
+#departed {
+    font-size: 3.0vw;
+    border: 1px solid black;
+    font-weight: bold;
+    background-color: #ffffff;
+    align-self: center;
+}
+
+#orange {
+    font-size: 3.0vw;
+    border: 0px solid black;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #F29401;
+    align-self: center;
+}
+
+#green {
+    font-size: 3.0vw;
+    border: 0px solid black;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #358F38;
+    align-self: center;
+}
+
+#red {
+    font-size: 3.0vw;
+    border: 0px solid black;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #E2001A;
+    align-self: center;
+}
+
+#detail {
+    align-self: center;
+}
+
+#equipment {
+    font-size: 3.0vw;
+    color: #ffffff /*#EBFCA0*/;
+    background-color: #0302B5;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flight {
+    font-size: 3.0vw;
+    color: #ffffff /*#EBFCA0*/;
+    background-color: #0302B5;
+    font-weight: bold;
+}
+
+#time {
+    font-size: 3.0vw;
+    color: #E3EE8E /*#EBFCA0*/;
+    background-color: #0302B5;
+    font-weight: bold;
+}
+
+#destination {
+    font-size: 3.0vw;
+    color: #E3EE8E /*#EBFCA0*/;
+    background-color: #0302B5;
+    font-weight: bold;
+}
+
+#registration {
+    font-size: 2.0vw;
+    color: #ffffff /*#EBFCA0*/;
+    background-color: #0302B5;
+    font-weight: bold;
+    text-align: center;
+}
+
+#linkText {
+    font-size: 3.0vw;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+
+
+#strike{
+
+}
+#orangefnt {
+    font-size: 3.0vw;
+    color: #F6A400;
+    background-color: #0302B5;
+    font-weight: bold;
+}

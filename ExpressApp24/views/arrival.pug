@@ -1,0 +1,122 @@
+﻿extends layout
+
+block content
+  head
+    title Bootstrap Example
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.1/css/all.css')
+    link(rel='stylesheet', href='/stylesheets/arrival.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js')
+    script.
+      function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[1];
+          td2 = tr[i].getElementsByTagName("td")[2];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else if(td2){
+              txtValue = td2.textContent || td2.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            }else {
+               tr[i].style.display = "none";
+            }
+            } else {
+               tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+      function getString() {
+        if(document.getElementById('hdr').value === "Helsinki-Vantaan")
+          return 1;
+        else
+          return 0;
+      }
+  body
+    nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+      a.navbar-brand(href='/')
+        i.fas.fa-home  Lennot
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+        span.navbar-toggler-icon
+      #collapsibleNavbar.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='airline') Lentoyhtiöt
+          li.nav-item
+            a.nav-link(href='airport') Lentoasemat
+          li.nav-item
+            a.nav-link(href='contact') Ota yhteyttä
+    br
+    .container.main
+      h3#hdr #{title} lentoaseman saapuvat lennot
+      p
+        | In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+      p Only when the button is clicked, the navigation bar will be displayed.
+      p
+        | Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.
+      p
+        input#myInput(type='text', onkeyup='myFunction()', placeholder='Hae lennon numerolla tai kohteella', title='Type in a name')
+      p
+      .container
+          .table-responsive
+    table#myTable.table.table-hover
+      tbody
+        td 
+          b Aika
+        td 
+          b Lento
+        td 
+          b Kohteesta
+        td
+          b 
+        td
+          b 
+        td 
+          b 
+        td 
+          b 
+        td
+          b 
+          -var index = 0
+          each flightObj in arrivallist
+            tr
+              td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+              td.flight=flightObj.fltnr[0]
+              td#destination=flightObj.route_n_1[0]
+              - var n = flightObj.bltarea[0]
+              unless n === ""
+                td#belt=flightObj.bltarea[0]
+              - var o = flightObj.park[0]
+              unless o === ""
+                td#gate=flightObj.park[0]
+              - var z = flightObj.prt_f[0]
+              - var v = flightObj.est_d[0]
+              if z === "Laskeutunut"
+                td.defaultBackground
+                  p#arrived=flightObj.prt_f[0] + " " + new Date(flightObj.act_d[0]).toString().slice(16,21)
+              if z === "Arvioitu aika"
+                if v !== ""
+                - var q = new Date(flightObj.est_d[0]).getTime()
+                - var p = new Date(flightObj.sdt[0]).getTime()
+                  if q < p
+                    td.defaultBackground
+                      p#early=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+              td#equipment=flightObj.actype[0]
+              - var x = (flightObj.acreg[0] ? new String(flightObj.acreg[0].substr(0,2) + "-" + flightObj.acreg[0].substr(2)) : "")
+              - var y = (flightObj.acreg[0] ? new String(x.toLowerCase()) : "")
+              td#registration
+                a#linkText(href="https://www.flightradar24.com/data/aircraft/" + y) #{x}
+              td#equipment=flightObj.callsign[0]
+              - index++
