@@ -6,6 +6,8 @@
     height: auto;
     background-repeat: no-repeat;
     background-position: center top;
+    /*added*/
+    background-size: cover;
 }
 
 
