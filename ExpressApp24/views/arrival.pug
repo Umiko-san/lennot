@@ -69,10 +69,10 @@ block content
       p
         input#myInput(type='text', onkeyup='myFunction()', placeholder='Hae lennon numerolla tai kohteella', title='Type in a name')
       p
-      .container
+      .container.fluid
           .table-responsive
     table#myTable.table.table-hover
-      tbody
+      tbody#hideThis
         td 
           b Aika
         td 
@@ -88,7 +88,8 @@ block content
         td 
           b 
         td
-          b 
+          b
+        tbody 
           -var index = 0
           each flightObj in arrivallist
             tr
