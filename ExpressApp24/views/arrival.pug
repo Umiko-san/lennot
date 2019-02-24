@@ -169,7 +169,7 @@ block content
                   - var o = flightObj.park[0]
                   if o === ""
                     td
-                      p#gate="-"
+                      p#gate="—"
                   else
                     td
                       p#gate=flightObj.park[0]
@@ -184,5 +184,9 @@ block content
                     - x = "—"
                   td#registration
                     a#linkText(href="https://www.flightradar24.com/data/aircraft/" + y) #{x}
-                  td#equipment=flightObj.callsign[0]
+                  - var e = flightObj.callsign[0]
+                  if e === ""
+                    td#equipment="—"
+                  else
+                    td#equipment=flightObj.callsign[0]
                   - index++

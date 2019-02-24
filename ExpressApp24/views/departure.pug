@@ -42,6 +42,44 @@ block content
           }
         }
       }
+      function checkboxFunction() {
+        var i = document.getElementById('myCheck');
+        if (i.checked == true) {
+            console.log('here');
+            var filter = "Lähtenyt";
+            var input, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[0];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.includes("Lähtenyt")) {
+                  console.log("poistetaan" + txtValue);
+                  tr[i].style.display = "none";     
+                } else {
+                  tr[i].style.display = "";           
+                }
+              }
+            }
+        } else {
+          console.log('here');
+          var filter = "Lähtenyt";
+          var input, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                tr[i].style.display = "";
+            }
+          }
+        }
+      }
   body
     nav.navbar.navbar-expand-md.bg-dark.navbar-dark.container
       a.navbar-brand(href='/')
@@ -60,85 +98,152 @@ block content
     .container.main
       h3 #{title} lentoaseman lähtevät lennot
       p
-        | In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
-      p Only when the button is clicked, the navigation bar will be displayed.
-      p
-        | Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.
-      p
         input#myInput(type='text', onkeyup='myFunction()', placeholder='Hae lennon numerolla tai kohteella', title='Type in a name')
       p
-          .table-responsive
-    table#myTable.table.table-hover
-      tbody
-        td 
-          b Aika
-        td 
-          b Lento
-        td 
-          b Kohde
-        td 
-          b 
-        td 
-          b 
-        td 
-          b 
-        td 
-          b 
-        td
-          b 
-          -var index = 0
-          each flightObj in flightlist
-            tr
-              - var a = new Date(flightObj.sdt[0]).getTime()
-              - var b = new Date(flightObj.est_d[0]).getTime()
-              if b > a
-                td#time
-                  strike(style='color:black')
-                    span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                  p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
-              else
-                td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
-              td.flight=flightObj.fltnr[0]
-              td#destination=flightObj.route_n_1[0]
-              - var z = flightObj.chkdsk_1[0]
-              - var q = flightObj.chkdsk_2[0]
-              - var o = flightObj.chkarea[0]
-              if o !== "" && o.length === 1
-                td#destination="T" + flightObj.chkarea[0]
-                  details#detail
-                    summary
-                    p Bag drop #{z} - #{q}
-              else if o !== ""
-                td#destination=flightObj.chkarea[0]
-              - var n = flightObj.gate[0]
-              unless n === ""
-                td#gate=flightObj.gate[0]
-              - var m = flightObj.prt_f[0]
-              - var dt2 = new Date(flightObj.ablk_d[0])
-              - var dt1 = new Date(flightObj.sdt[0])
-              - var j = Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24))
-              td.defaultBackground
-                if m === "Arvioitu aika" && j > 0
-                    p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21) + " +" + j
-                else if m === "Arvioitu aika"
-                  if a < b
-                    p#orange=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
-                  else if a > b
-                    p#green=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+        input#myCheck(type='checkbox', onclick='checkboxFunction()')
+        label.form-check-label(for='myCheck') Piilota lähteneet lennot
+      p
+    .container.fluid
+      .table-responsive
+        table#myTable.table.table-hover
+          tbody
+            td 
+              b Aika
+            td 
+              b Lento
+            td 
+              b Kohde
+            td 
+              b Terminaali
+            td 
+              b Portti
+            td 
+              b Konetyyppi
+            td
+              b Tunnus
+            td
+              b Kutsumerkki
+              -var index = 0
+              each flightObj in flightlist
+                tr
+                  - var a = new Date(flightObj.sdt[0]).getTime()
+                  - var b = new Date(flightObj.est_d[0]).getTime()
+                  - var m = flightObj.prt_f[0]
+                  - var dt2 = new Date(flightObj.ablk_d[0])
+                  - var dt1 = new Date(flightObj.sdt[0])
+                  - var j = Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24))
+                  if b > a
+                    if m === "Arvioitu aika" && j > 0
+                      td#time
+                        strike(style='color:black')
+                          span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                        p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+                          p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21) + " +" + j
+                    else if m === "Arvioitu aika"
+                      if a < b
+                        td#time
+                          strike(style='color:black')
+                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            p#orange=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                      else if a > b
+                        td#time
+                          strike(style='color:black')
+                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            p#green=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                      else
+                        td#time
+                          strike(style='color:black')
+                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                    else if m === "Suljettu" || m === "Viimeinen kutsu"
+                        td#time
+                          strike(style='color:black')
+                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            p#orange=flightObj.prt_f[0] 
+                    else if m === "Lähdössä" || m === "Portille"
+                        td#time
+                          strike(style='color:black')
+                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            p#green=flightObj.prt_f[0]
+                    else if m === "Peruttu"
+                        td#time
+                          strike(style='color:black')
+                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            p#red=flightObj.prt_f[0]
+                    else if m !== ""
+                        td#time
+                          strike(style='color:black')
+                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21)                  
                   else
-                    p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
-                else if m === "Suljettu" || m === "Viimeinen kutsu"
-                    p#orange=flightObj.prt_f[0] 
-                else if m === "Lähdössä" || m === "Portille"
-                    p#green=flightObj.prt_f[0]
-                else if m === "Peruttu"
-                    p#red=flightObj.prt_f[0]
-                else if m !== ""
-                  p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21)
-              td#equipment=flightObj.actype[0]
-              - var x = (flightObj.acreg[0] ? new String(flightObj.acreg[0].substr(0,2) + "-" + flightObj.acreg[0].substr(2)) : "")
-              - var y = (flightObj.acreg[0] ? new String(x.toLowerCase()) : "")
-              td#registration
-                a#linkText(href="https://www.flightradar24.com/data/aircraft/" + y) #{x}
-              td#equipment=flightObj.callsign[0]
-              - index++
+                    if m === "Arvioitu aika" && j > 0
+                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                        p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21) + " +" + j
+                    else if m === "Arvioitu aika" || m === "Myöhässä"
+                      if a < b
+                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#orange=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                      else if a > b
+                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#green=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                      else
+                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                    else if m === "Suljettu" || m === "Viimeinen kutsu"
+                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                        p#orange=flightObj.prt_f[0] 
+                    else if m === "Lähdössä" || m === "Portille"
+                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                        p#green=flightObj.prt_f[0]
+                    else if m === "Peruttu"
+                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                        p#red=flightObj.prt_f[0]
+                    else if m !== ""
+                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                        p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21)
+                    else
+                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)          
+                  td.flight=flightObj.fltnr[0]
+                  td#destination=flightObj.route_n_1[0]
+                  - var z = flightObj.chkdsk_1[0]
+                  - var q = flightObj.chkdsk_2[0]
+                  - var o = flightObj.chkarea[0]
+                  if o !== "" && o.length === 1
+                    td#destination="T" + flightObj.chkarea[0]
+                      details#detail
+                        summary
+                        p Bag drop #{z} - #{q}
+                  else if o !== ""
+                    td#destination=flightObj.chkarea[0]
+                  else
+                    td#destinationNotFound=""
+                  - var n = flightObj.park[0]
+                  if n === ""
+                    td
+                      p#gate="—"
+                  else
+                    td
+                      p#gate=flightObj.park[0]
+                  if j === ""
+                    td#equipment="—"
+                  else
+                    td#equipment=flightObj.actype[0]
+                  - var x = (flightObj.acreg[0] ? new String(flightObj.acreg[0].substr(0,2) + "-" + flightObj.acreg[0].substr(2)) : "")
+                  - var y = (flightObj.acreg[0] ? new String(x.toLowerCase()) : "")
+                  if y === ""
+                    - x = "—"
+                  td#registration
+                    a#linkText(href="https://www.flightradar24.com/data/aircraft/" + y) #{x}
+                  - var e = flightObj.callsign[0]
+                  if e === ""
+                    td#equipment="—"
+                  else
+                    td#equipment=flightObj.callsign[0]
+                  - index++

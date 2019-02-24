@@ -1,18 +1,6 @@
 ﻿
 body {
-
-}
-
-.defaultBackground {
-    background-color: #0302B5;
-}
-
-#gate {
-    font-size: 3.8vw;
-    color: #000000;
-    background-color: #F5FE3F /*#F5FE3F*/;
-    font-weight: bold;
-    text-align: center;
+    height: auto;
 }
 
 .main {
@@ -20,100 +8,192 @@ body {
     background-color: #ffffff;
 }
 
-/*#0302B5 depboard*/
-/*#F5FE3F gate*/
 
-/*fonts*/
-#departed {
-    font-size: 3.0vw;
-    border: 1px solid black;
-    font-weight: bold;
-    background-color: #ffffff;
-    align-self: center;
-}
+@media only screen and (min-width: 768px) { /*Ei valmis*/
 
-#orange {
-    font-size: 3.0vw;
-    border: 0px solid black;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #F29401;
-    align-self: center;
-}
+    /*background-color: #0302B5;*/
 
-#green {
-    font-size: 3.0vw;
-    border: 0px solid black;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #358F38;
-    align-self: center;
-}
+    #myTable {
+        table-layout: fixed;
+        width: 100%;
+    }
 
-#red {
-    font-size: 3.0vw;
-    border: 0px solid black;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #E2001A;
-    align-self: center;
-}
+    #orangefnt {
+        font-size: 0.70vw;
+        color: #F6A400;
+        font-weight: bold;
+    }
 
-#detail {
-    align-self: center;
-}
+    #orange {
+        font-size: 0.70vw;
+        border: 0px solid black;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #F29401;
+        align-self: center;
+    }
 
-#equipment {
-    font-size: 3.0vw;
-    color: #ffffff /*#EBFCA0*/;
-    background-color: #0302B5;
-    font-weight: bold;
-    text-align: center;
-}
+    #green {
+        font-size: 0.70vw;
+        border: 0px solid black;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #358F38;
+        align-self: center;
+    }
 
-.flight {
-    font-size: 3.0vw;
-    color: #ffffff /*#EBFCA0*/;
-    background-color: #0302B5;
-    font-weight: bold;
-}
+    #red {
+        font-size: 0.70vw;
+        border: 0px solid black;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #E2001A;
+        align-self: center;
+    }
 
-#time {
-    font-size: 3.0vw;
-    color: #E3EE8E /*#EBFCA0*/;
-    background-color: #0302B5;
-    font-weight: bold;
-}
+    #gate {
+        font-size: 0.70vw;
+        color: #ffffff;
+        border: 2px solid white;
+        font-weight: bold;
+        text-align: center;
+        align-self: center;
+        padding: 5px;
+    }
 
-#destination {
-    font-size: 3.0vw;
-    color: #E3EE8E /*#EBFCA0*/;
-    background-color: #0302B5;
-    font-weight: bold;
-}
+    #belt {
+        font-size: 0.70vw;
+        border: 2px solid #151D41;
+        background-color: #151D41;
+        color: #F2ED77;
+        font-weight: bold;
+        text-align: center;
+        align-self: center;
+        padding: 5px;
+    }
+    /*#0302B5 depboard*/
+    /*#F5FE3F gate*/
 
-#registration {
-    font-size: 2.0vw;
-    color: #ffffff /*#EBFCA0*/;
-    background-color: #0302B5;
-    font-weight: bold;
-    text-align: center;
-}
+    /*fonts*/
 
-#linkText {
-    font-size: 3.0vw;
-    font-weight: bold;
-    text-align: center;
-    vertical-align: text-bottom;
-}
+    #departed {
+        font-size: 0.70vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
 
+    #delayed {
+        font-size: 0.70vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #F29401;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
 
-#strike{
+    #normalTime {
+        font-size: 0.70vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
 
-}
-#orangefnt {
-    font-size: 3.0vw;
-    color: #F6A400;
-    background-color: #0302B5;
-    font-weight: bold;
+    #early {
+        font-size: 0.70vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #358F38;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+    /*oranssi on #F29401*/
+    #equipment {
+        font-size: 0.70vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .flight {
+        font-size: 0.70vw;
+        color: #ffffff /*#EBFCA0*/;
+        /*background-color: #0302B5;*/
+        font-weight: bold;
+    }
+
+    #flightText {
+        text-decoration: none;
+        font-size: 0.70vw;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: text-bottom;
+        color: white;
+    }
+
+    .main {
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+
+    #time {
+        font-size: 0.70vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        padding-bottom: 0px;
+        font-weight: bold;
+    }
+
+    #destination {
+        font-size: 0.70vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+    }
+
+    #destinationNotFound {
+        font-size: 0.70vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+        text-align: justify;
+    }
+
+    #registration {
+        font-size: 0.70vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #linkText {
+        font-size: 0.70vw;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: text-bottom;
+    }
+
+    tr:nth-child(even) {
+        background-color: #0248F5;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #5B91FD;
+    }
+
+    tr:hover td {
+        background: #000
+    }
 }
