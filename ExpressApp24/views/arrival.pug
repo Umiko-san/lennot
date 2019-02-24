@@ -27,11 +27,15 @@ block content
               tr[i].style.display = "";
             } else if(td2){
               txtValue = td2.textContent || td2.innerText;
-              if (txtValue.toUpperCase().indexOf(filter) > -1)
-                tr[i].style.display = "";
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            }else {
+               tr[i].style.display = "none";
+            }
             } else {
                tr[i].style.display = "none";
             }
+          }
         }
       }
       function getString() {
