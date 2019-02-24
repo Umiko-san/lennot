@@ -316,11 +316,26 @@
     }
 }
 
-/*Ei valmis väärää*/
-@media only screen and (min-width: 641px) and (max-width: 768px) { /*Ei valmis*/
+/*Ei valmis tabletit*/
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 768px;
+    }
 
     .defaultBackground {
         background-color: #0302B5;
+        min-width: 50px;
     }
     #gate {
         font-size: 3.8vw;
@@ -348,6 +363,7 @@
         font-weight: bold;
         background-color: #ffffff;
         align-self: center;
+        word-wrap: break-word;
     }
 
     #early {
@@ -392,10 +408,11 @@
         color: #E3EE8E /*#EBFCA0*/;
         background-color: #0302B5;
         font-weight: bold;
+        word-wrap: break-word;
     }
 
     #registration {
-        font-size: 2.0vw;
+        font-size: 1.5vw;
         color: #ffffff /*#EBFCA0*/;
         background-color: #0302B5;
         font-weight: bold;
@@ -413,23 +430,32 @@
 /*Ei valmis väärää*/
 @media only screen and (min-width: 768px) { /*Ei valmis*/
 
-    .defaultBackground {
-        background-color: #0302B5;
+    /*background-color: #0302B5;*/ 
+
+    #myTable {
+        table-layout: fixed;
+        width: 100%;
     }
+
     #gate {
-        font-size: 3.8vw;
-        color: #000000;
-        background-color: #F5FE3F /*#F5FE3F*/;
+        font-size: 0.70vw;
+        color: #ffffff;
+        border: 2px solid white;
         font-weight: bold;
         text-align: center;
+        align-self: center;
+        padding: 5px;
     }
 
     #belt {
-        font-size: 3.8vw;
+        font-size: 0.70vw;
+        border: 2px solid #151D41;
         background-color: #151D41;
         color: #F2ED77;
         font-weight: bold;
         text-align: center;
+        align-self: center;
+        padding: 5px;
     }
     /*#0302B5 depboard*/
     /*#F5FE3F gate*/
@@ -437,36 +463,71 @@
     /*fonts*/
 
     #arrived {
-        font-size: 3.0vw;
+        font-size: 0.70vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #ffffff;
+        color: #000000;
         align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #delayed {
+        font-size: 0.70vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #F29401;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #normalTime {
+        font-size: 0.70vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
     }
 
     #early {
-        font-size: 3.0vw;
-        border: 0px;
+        font-size: 0.70vw;
+        border: 1px solid black;
         font-weight: bold;
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
-        text-align: center;
+        word-break: break-word;
+        min-width: 50px;
     }
     /*oranssi on #F29401*/
     #equipment {
-        font-size: 3.0vw;
+        font-size: 0.70vw;
         color: #ffffff /*#EBFCA0*/;
-        background-color: #0302B5;
         font-weight: bold;
         text-align: center;
     }
 
     .flight {
-        font-size: 3.0vw;
+        font-size: 0.70vw;
         color: #ffffff /*#EBFCA0*/;
-        background-color: #0302B5;
+        /*background-color: #0302B5;*/ 
         font-weight: bold;
+    }
+
+    #flightText {
+        text-decoration: none;
+        font-size: 0.70vw;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: text-bottom;
+        color: white;
     }
 
     .main {
@@ -475,31 +536,45 @@
     }
 
     #time {
-        font-size: 3.0vw;
+        font-size: 0.70vw;
         color: #E3EE8E /*#EBFCA0*/;
-        background-color: #0302B5;
+        padding-bottom: 0px;
         font-weight: bold;
     }
 
     #destination {
-        font-size: 3.0vw;
+        font-size: 0.70vw;
         color: #E3EE8E /*#EBFCA0*/;
-        background-color: #0302B5;
+        word-break: break-word;
         font-weight: bold;
     }
 
     #registration {
-        font-size: 2.0vw;
+        font-size: 0.70vw;
         color: #ffffff /*#EBFCA0*/;
-        background-color: #0302B5;
         font-weight: bold;
         text-align: center;
     }
 
     #linkText {
-        font-size: 3.0vw;
+        font-size: 0.70vw;
         font-weight: bold;
         text-align: center;
         vertical-align: text-bottom;
     }
+
+    tr:nth-child(even) {
+        background-color: #0248F5;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #5B91FD;
+    }
+
+    tr:hover td {
+        background: #000
+    }
+
 }
+
+/*    .container.fluid*/

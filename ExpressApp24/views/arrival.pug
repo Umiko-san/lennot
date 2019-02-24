@@ -27,11 +27,8 @@ block content
               tr[i].style.display = "";
             } else if(td2){
               txtValue = td2.textContent || td2.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            }else {
-               tr[i].style.display = "none";
-            }
+              if (txtValue.toUpperCase().indexOf(filter) > -1)
+                tr[i].style.display = "";
             } else {
                tr[i].style.display = "none";
             }
@@ -43,6 +40,44 @@ block content
           return 1;
         else
           return 0;
+      }
+      function checkboxFunction() {
+        var i = document.getElementById('myCheck');
+        if (i.checked == true) {
+            console.log('here');
+            var filter = "Laskeutunut";
+            var input, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[0];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.includes("Laskeutunut")) {
+                  console.log("poistetaan" + txtValue);
+                  tr[i].style.display = "none";     
+                } else {
+                  tr[i].style.display = "";           
+                }
+              }
+            }
+        } else {
+          console.log('here');
+          var filter = "Laskeutunut";
+          var input, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                tr[i].style.display = "";
+            }
+          }
+        }
       }
   body
     nav.navbar.navbar-expand-md.bg-dark.navbar-dark.container
@@ -69,55 +104,87 @@ block content
       p
         input#myInput(type='text', onkeyup='myFunction()', placeholder='Hae lennon numerolla tai kohteella', title='Type in a name')
       p
-      .container.fluid
-          .table-responsive
-    table#myTable.table.table-hover
-      tbody#hideThis
-        td 
-          b Aika
-        td 
-          b Lento
-        td 
-          b Kohteesta
-        td
-          b 
-        td
-          b 
-        td 
-          b 
-        td 
-          b 
-        td
-          b
-        tbody 
-          -var index = 0
-          each flightObj in arrivallist
-            tr
-              td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
-              td.flight=flightObj.fltnr[0]
-              td#destination=flightObj.route_n_1[0]
-              - var n = flightObj.bltarea[0]
-              unless n === ""
-                td#belt=flightObj.bltarea[0]
-              - var o = flightObj.park[0]
-              unless o === ""
-                td#gate=flightObj.park[0]
-              - var z = flightObj.prt_f[0]
-              - var v = flightObj.est_d[0]
-              if z === "Laskeutunut"
-                td.defaultBackground
-                  p#arrived=flightObj.prt_f[0] + " " + new Date(flightObj.act_d[0]).toString().slice(16,21)
-              if z === "Arvioitu aika"
-                if v !== ""
-                - var q = new Date(flightObj.est_d[0]).getTime()
-                - var p = new Date(flightObj.sdt[0]).getTime()
-                  if q < p
-                    td.defaultBackground
-                      p#early=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
-              td#equipment=flightObj.actype[0]
-              - var x = (flightObj.acreg[0] ? new String(flightObj.acreg[0].substr(0,2) + "-" + flightObj.acreg[0].substr(2)) : "")
-              - var y = (flightObj.acreg[0] ? new String(x.toLowerCase()) : "")
-              td#registration
-                a#linkText(href="https://www.flightradar24.com/data/aircraft/" + y) #{x}
-              td#equipment=flightObj.callsign[0]
-              - index++
+        input#myCheck(type='checkbox', onclick='checkboxFunction()')
+        label.form-check-label(for='myCheck') Piilota saapuneet lennot
+      p
+    .container.fluid
+      .table-responsive
+        table#myTable.table.table-hover
+          tbody#hideThis
+            td 
+              b Aika
+            td 
+              b Lento
+            td 
+              b Kohteesta
+            td
+              b Hihna
+            td
+              b Portti
+            td 
+              b Konetyyppi
+            td 
+              b Tunnus
+            td
+              b Kutsumerkki
+            tbody 
+              -var index = 0
+              each flightObj in arrivallist
+                tr
+                  - var z = flightObj.prt_f[0]
+                  - var v = flightObj.est_d[0]
+                  if z === "undefined"
+                    td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                  else if z === "Myöhässä"
+                    td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                      p#delayed="Myöhässä"
+                  else if z === "Laskeutunut"
+                    td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                      p#normalTime=flightObj.prt_f[0] + " " + new Date(flightObj.act_d[0]).toString().slice(16,21)
+                  else if z === "Arvioitu aika"
+                    if v !== ""
+                    - var q = new Date(flightObj.est_d[0]).getTime()
+                    - var p = new Date(flightObj.sdt[0]).getTime()
+                      if q < p
+                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#early=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                      else if q > p
+                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#delayed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                      else
+                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                          p#delayed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                  else
+                    td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                  - var h = flightObj.fltnr[0]
+                  - var l = new String((flightObj.fltnr[0]).toLowerCase())
+                  td.flight
+                    a#flightText(href="https://www.flightradar24.com/data/flights/" + l) #{h}
+                  td#destination=flightObj.route_n_1[0]
+                  - var n = flightObj.bltarea[0]
+                  if n === ""
+                    td
+                      p#belt="—"
+                  else       
+                    td
+                      p#belt=flightObj.bltarea[0]
+                  - var o = flightObj.park[0]
+                  if o === ""
+                    td
+                      p#gate="-"
+                  else
+                    td
+                      p#gate=flightObj.park[0]
+                  - var j = flightObj.actype[0]
+                  if j === ""
+                    td#equipment="—"
+                  else
+                    td#equipment=flightObj.actype[0]
+                  - var x = (flightObj.acreg[0] ? new String(flightObj.acreg[0].substr(0,2) + "-" + flightObj.acreg[0].substr(2)) : "")
+                  - var y = (flightObj.acreg[0] ? new String(x.toLowerCase()) : "")
+                  if y === ""
+                    - x = "—"
+                  td#registration
+                    a#linkText(href="https://www.flightradar24.com/data/aircraft/" + y) #{x}
+                  td#equipment=flightObj.callsign[0]
+                  - index++

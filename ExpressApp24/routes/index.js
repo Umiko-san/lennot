@@ -67,12 +67,18 @@ function arrival_callback(error, response, body) {
             console.log("No flights in the next 30 hours");
             myResponse = "noflightsinnext30";
         } else {
+            try {
+
             parseString(xml, function (err, result) {
 
                 console.log(result.flights.arr[0].body[0].flight);
                 myResponse = result.flights.arr[0].body[0].flight;
 
             });
+            } catch (error) {
+                console.log("Parsingerror " + error);
+             
+            }
         }
     }
 }
@@ -107,6 +113,7 @@ router.get('/arrival', function (req, res) {
                     var a = new Date();
                     var b = a.toUTCString();
                     console.log("1st timeout " + b);
+                    //start /*
                     /*
                     if (addTime === 1) {
                         setTimeout(function () {
@@ -120,16 +127,19 @@ router.get('/arrival', function (req, res) {
                                 res.render('departure', { flightlist: myResponse, title: req.query.id });
                             }
                         }, 2000);
-                    } else {*/
-                    if (myResponse === 'noflightsinnext30') {
-                        res.render('index', { title: "Express", apierror2: n + " Ei lentoja seuraavaan 30 tuntiin." });
-                    } else if (myResponse === null) {
-                        res.render('index', { title: "Express", apierror2: "Api error " + n + " try again." });
                     } else {
-                        console.log("Rendering 1st timeout loop");
-                        res.render('arrival', { arrivallist: myResponse, title: getValue(req.query.id) });
-                    }
-                    /*/*/
+                    */
+                        //end */
+                        if (myResponse === 'noflightsinnext30') {
+                            res.render('index', { title: "Express", apierror2: n + " Ei lentoja seuraavaan 30 tuntiin." });
+                        } else if (myResponse === null) {
+                            res.render('index', { title: "Express", apierror2: "Api error " + n + " try again." });
+                        } else {
+                            console.log("Rendering 1st timeout loop");
+                            res.render('arrival', { arrivallist: myResponse, title: getValue(req.query.id) });
+                        }
+                    // /* } */
+                    /*}*/
                 }, 2000);
             } else if (myResponse === 'noflightsinnext30') {
                 res.render('index', { title: "Express", apierro2r: n + " Ei lentoja seuraavaan 30 tuntiin." });
