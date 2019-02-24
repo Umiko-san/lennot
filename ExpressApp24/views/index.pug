@@ -38,7 +38,7 @@ block content
         i.fas.fa-plane-departure#fnt  Lähtevät lennot
       form.form-inline(method='get', action='/departure/')
         .form-group.mb-2
-          label Lähtöpaikka: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          label.dpb Lähtöpaikka: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         .form-group.mx-sm-3.mb-2
           input.form-control(name='id', list='id', required='', placeholder='Valitse...')
           datalist#id
@@ -69,7 +69,7 @@ block content
         i.fas.fa-plane-arrival#fnt  Saapuvat lennot
       form.form-inline(method='get', action='/arrival/')
         .form-group.mb-2
-          label Saapumispaikka:
+          label.dpb Saapumispaikka:
         .form-group.mx-sm-3.mb-2
           input.form-control(name='id', list='id', required='', placeholder='Valitse...')
           datalist#id
