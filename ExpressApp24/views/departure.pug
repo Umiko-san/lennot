@@ -106,7 +106,7 @@ block content
     .container.fluid
       .table-responsive
         table#myTable.table.table-hover
-          tbody
+          tbody#hideThis
             td.header 
               b Aika
             td.header 
@@ -123,6 +123,7 @@ block content
               b Tunnus
             td.header
               b Merkki
+            tbody
               -var index = 0
               each flightObj in flightlist
                 tr
