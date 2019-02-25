@@ -338,7 +338,9 @@
         word-break: break-word;
         font-size: 10px;
     }
-
+    #limit{
+        width: 60px;
+    }
 
     #paddingElement {
         padding-left: 8px;
@@ -444,6 +446,7 @@
         word-break: break-word;
         padding: 0.5px;
         border: 1px solid black;
+        min-width: 50px;
     }
 
     #early {
@@ -470,6 +473,7 @@
         color: #ffffff /*#EBFCA0*/;
         /*background-color: #0302B5;*/
         font-weight: bold;
+        max-width: 31px;
     }
 
     #flightText {
@@ -477,7 +481,7 @@
         font-size: 2.00vw;
         font-weight: bold;
         text-align: center;
-        vertical-align: text-bottom;
+        align-content: center;
         color: white;
     }
 
@@ -506,8 +510,8 @@
         font-size: 2.00vw;
         color: #E3EE8E /*#EBFCA0*/;
         padding-bottom: 0px;
-        min-width: 50px;
         font-weight: bold;
+        max-width: 80px;
     }
 
     #destination {
@@ -561,6 +565,9 @@
         padding-left: 8px;
     }
 
+    .header{
+        font-size: 12px;
+    }
     #myTable {
         table-layout: fixed;
         width: 100%;
