@@ -175,18 +175,22 @@ block content
                       p#gate=flightObj.park[0]
                   - var j = flightObj.actype[0]
                   if j === ""
-                    td#equipment="—"
+                    td#center
+                      a#atcAir="—"
                   else
-                    td#equipment=flightObj.actype[0]
+                    td#center
+                      a#atcAir=flightObj.actype[0]
                   - var x = (flightObj.acreg[0] ? new String(flightObj.acreg[0].substr(0,2) + "-" + flightObj.acreg[0].substr(2)) : "")
                   - var y = (flightObj.acreg[0] ? new String(x.toLowerCase()) : "")
                   if y === ""
                     - x = "—"
-                  td#registration
+                  td#left
                     a#linkText(href="https://www.flightradar24.com/data/aircraft/" + y) #{x}
                   - var e = flightObj.callsign[0]
                   if e === ""
-                    td#equipment="—"
+                    td
+                      a#atcAir="—"
                   else
-                    td#equipment=flightObj.callsign[0]
+                    td
+                      a#atcAir=flightObj.callsign[0]
                   - index++

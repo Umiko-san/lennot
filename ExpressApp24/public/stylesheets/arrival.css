@@ -541,6 +541,22 @@
         color: white;
     }
 
+    #center {
+        text-align: center;
+    }
+
+    #left {
+        text-align: left;
+    }
+
+    /*oranssi on #F29401*/
+    #atcAir {
+        font-size: 0.70vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
     .main {
         font-size: 14px;
         background-color: #ffffff;
@@ -570,8 +586,7 @@
     #linkText {
         font-size: 0.70vw;
         font-weight: bold;
-        text-align: center;
-        vertical-align: text-bottom;
+        vertical-align: super;
     }
 
     tr:nth-child(even) {
