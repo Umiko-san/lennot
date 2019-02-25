@@ -132,84 +132,98 @@ block content
                   - var dt2 = new Date(flightObj.ablk_d[0])
                   - var dt1 = new Date(flightObj.sdt[0])
                   - var j = Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24))
+                  - var temp = new Date(flightObj.sdt[0])
+                  - var dateStd = temp.setHours(temp.getHours() + 2)
+                  - dateStd = new Date(dateStd).toString().slice(16,21)
+                  - var temp2 = new Date(flightObj.act_d[0])
+                  - console.log(temp2)
+                  - var dateAct = temp2.setHours(temp2.getHours() + 2)
+                  - dateAct = new Date(dateAct).toString().slice(16,21)
+                  - var temp3 = new Date(flightObj.est_d[0])
+                  - var dateEst = temp3.setHours(temp3.getHours() + 2)
+                  - dateEst = new Date(dateEst).toString().slice(16,21)
+                  - console.log(dateEst + " " + dateAct + " " + dateStd)
+                  - var temp4 = new Date(flightObj.ablk_d[0])
+                  - var dateAblk = temp4.setHours(temp4.getHours() + 2)
+                  - dateAblk = new Date(dateAblk).toString().slice(16,21)
                   if b > a
                     if m === "Arvioitu aika" && j > 0
                       td#time
                         strike(style='color:black')
-                          span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                        p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
-                          p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21) + " +" + j
+                          span(style='color:#E3EE8E')=dateStd
+                        p#orangefnt=dateEst
+                          p#departed=flightObj.prt_f[0] + " " + dateAblk + " +" + j
                     else if m === "Arvioitu aika"
                       if a < b
                         td#time
                           strike(style='color:black')
-                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
-                            p#orange=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            span(style='color:#E3EE8E')=dateStd
+                          p#orangefnt=dateEst
+                            p#orange=flightObj.prt_f[0] + " " + dateEst
                       else if a > b
                         td#time
                           strike(style='color:black')
-                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
-                            p#green=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            span(style='color:#E3EE8E')=dateStd
+                          p#orangefnt=dateEst
+                            p#green=flightObj.prt_f[0] + " " + dateEst
                       else
                         td#time
                           strike(style='color:black')
-                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
-                            p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            span(style='color:#E3EE8E')=dateStd
+                          p#orangefnt=dateEst
+                            p#departed=flightObj.prt_f[0] + " " + dateEst
                     else if m === "Suljettu" || m === "Viimeinen kutsu"
                         td#time
                           strike(style='color:black')
-                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            span(style='color:#E3EE8E')=dateStd
+                          p#orangefnt=dateEst
                             p#orange=flightObj.prt_f[0] 
                     else if m === "Lähdössä" || m === "Portille"
                         td#time
                           strike(style='color:black')
-                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            span(style='color:#E3EE8E')=dateStd
+                          p#orangefnt=dateEst
                             p#green=flightObj.prt_f[0]
                     else if m === "Peruttu"
                         td#time
                           strike(style='color:black')
-                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
+                            span(style='color:#E3EE8E')=dateStd
+                          p#orangefnt=dateEst
                             p#red=flightObj.prt_f[0]
                     else if m !== ""
                         td#time
                           strike(style='color:black')
-                            span(style='color:#E3EE8E')=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#orangefnt=new Date(flightObj.est_d[0]).toString().slice(16,21)
-                            p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21)                  
+                            span(style='color:#E3EE8E')=dateStd
+                          p#orangefnt=dateEst
+                            p#departed=flightObj.prt_f[0] + " " + dateAblk                 
                   else
                     if m === "Arvioitu aika" && j > 0
-                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                        p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21) + " +" + j
+                      td#time=dateStd
+                        p#departed=flightObj.prt_f[0] + " " + dateAblk + " +" + j
                     else if m === "Arvioitu aika" || m === "Myöhässä"
                       if a < b
-                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#orange=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                        td#time=dateStd
+                          p#orange=flightObj.prt_f[0] + " " + dateEst
                       else if a > b
-                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#green=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                        td#time=dateStd
+                          p#green=flightObj.prt_f[0] + " " + dateEst
                       else
-                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                        td#time=dateStd
+                          p#departed=flightObj.prt_f[0] + " " + dateEst
                     else if m === "Suljettu" || m === "Viimeinen kutsu"
-                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                      td#time=dateStd
                         p#orange=flightObj.prt_f[0] 
                     else if m === "Lähdössä" || m === "Portille"
-                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                      td#time=dateStd
                         p#green=flightObj.prt_f[0]
                     else if m === "Peruttu"
-                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                      td#time=dateStd
                         p#red=flightObj.prt_f[0]
                     else if m !== ""
-                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                        p#departed=flightObj.prt_f[0] + " " + new Date(flightObj.ablk_d[0]).toString().slice(16,21)
+                      td#time=dateStd
+                        p#departed=flightObj.prt_f[0] + " " + dateAblk
                     else
-                      td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                      td#time=dateStd
                   - var h = flightObj.fltnr[0]
                   - var l = new String((flightObj.fltnr[0]).toLowerCase())          
                   td.flight

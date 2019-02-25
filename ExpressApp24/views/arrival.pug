@@ -140,6 +140,9 @@ block content
                   - dateAct = new Date(dateAct).toString().slice(16,21)
                   if z === "undefined"
                     td#time=dateStd
+                  else if z === "Lähestyy"
+                    td#time=dateStd
+                      p#early=flightObj.prt_f[0]
                   else if z === "Myöhässä"
                     td#time=dateStd
                       p#delayed="Myöhässä"
