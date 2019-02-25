@@ -11,11 +11,11 @@ router.get('/contact', function (req, res) {
 });
 
 router.get('/airport', function (req, res) {
-    res.render('contact');
+    res.render('airport');
 });
 
 router.get('/airline', function (req, res) {
-    res.render('contact');
+    res.render('airline');
 });
 
 module.exports = router;

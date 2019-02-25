@@ -142,7 +142,7 @@ router.get('/arrival', function (req, res) {
                     /*}*/
                 }, 2000);
             } else if (myResponse === 'noflightsinnext30') {
-                res.render('index', { title: "Express", apierro2r: n + " Ei lentoja seuraavaan 30 tuntiin." });
+                res.render('/', { title: "Express", apierro2r: n + " Ei lentoja seuraavaan 30 tuntiin." });
             } else {
                 console.log("Rendering before loops");
                 res.render('arrival', { arrivallist: myResponse, title: getValue(req.query.id) });
@@ -233,7 +233,7 @@ router.get('/departure', function (req, res) {
                     /*/*/
                 }, 2000);
             } else if (myResponse === 'noflightsinnext30') {
-                res.render('index', { title: "Express", apierror: n + " Ei lentoja seuraavaan 30 tuntiin." });
+                res.render('/', { title: "Express", apierror: n + " Ei lentoja seuraavaan 30 tuntiin." });
             } else {
                 console.log("Rendering before loops");
                 res.render('departure', { flightlist: myResponse, title: getValue(req.query.id) });
