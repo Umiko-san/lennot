@@ -208,6 +208,18 @@
         min-width: 50px;
     }
 
+    #sameTime {
+        font-size: 6vw;
+        border: 1px solid #ffffff;
+        font-weight: bold;
+        background-color: #0C2645;
+        color: #ffffff;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
     #cnl {
         font-size: 6vw;
         font-weight: bold;
@@ -392,6 +404,18 @@
         min-width: 50px;
     }
 
+    #sameTime {
+        font-size: 2.00vw;
+        border: 1px solid #ffffff;
+        font-weight: bold;
+        background-color: #0C2645;
+        color: #ffffff;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
     #normalTime {
         font-size: 2.00vw;
         border: 1px solid black;
@@ -484,14 +508,16 @@
         word-break: break-word;
         font-weight: bold;
     }
-
+    /*Tämä on turha*/
+    /*
     #registration {
         font-size: 2.00vw;
-        color: #ffffff /*#EBFCA0*/;
+        color: #ffffff ;
         font-weight: bold;
         text-align: center;
+        vertical-align: super;
     }
-
+    */
     #linkText {
         font-size: 2.00vw;
         font-weight: bold;
@@ -583,6 +609,18 @@
         font-weight: bold;
         background-color: #ffffff;
         color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #sameTime {
+        font-size: 1.5vw;
+        border: 1px solid #ffffff;
+        font-weight: bold;
+        background-color: #0C2645;
+        color: #ffffff;
         align-self: center;
         padding: 5px;
         word-break: break-word;
@@ -776,6 +814,18 @@
         min-width: 50px;
     }
 
+    #sameTime {
+        font-size: 1.75vw;
+        border: 1px solid #ffffff;
+        font-weight: bold;
+        background-color: #0C2645;
+        color: #ffffff;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
     #cnl {
         font-size: 1.75vw;
         font-weight: bold;
@@ -955,6 +1005,18 @@
         font-weight: bold;
         background-color: #ffffff;
         color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #sameTime {
+        font-size: 0.70vw;
+        border: 1px solid #ffffff;
+        font-weight: bold;
+        background-color: #0C2645;
+        color: #ffffff;
         align-self: center;
         padding: 5px;
         word-break: break-word;

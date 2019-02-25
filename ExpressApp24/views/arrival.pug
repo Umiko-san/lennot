@@ -161,9 +161,9 @@ block content
                       else if q > p
                         td#time=dateStd
                           p#delayed=flightObj.prt_f[0] + " " + dateEst
-                      else
+                      else if q == p
                         td#time=dateStd
-                          p#delayed=flightObj.prt_f[0] + " " + dateEst
+                          p#sameTime=flightObj.prt_f[0] + " " + dateEst
                   else if z === "Peruttu"
                     td#time=dateStd
                       p#cnl="Peruttu"
