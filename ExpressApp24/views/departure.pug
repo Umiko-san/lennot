@@ -236,7 +236,7 @@ block content
                   - var z = flightObj.chkdsk_1[0]
                   - var q = flightObj.chkdsk_2[0]
                   - var o = flightObj.chkarea[0]
-                  if o !== "" && o.length === 1
+                  if o !== "" && o.length === 1 && o !== "undefined"
                     td#destination="T" + flightObj.chkarea[0]
                       details#detail
                         summary
