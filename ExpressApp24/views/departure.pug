@@ -247,10 +247,10 @@ block content
                         a#gateDotted=flightObj.gate[0]
                       span.CellComment Remote stand #{f}
                   else if n === ""
-                    td
+                    td#mobile
                       p#gate="—"
                   else
-                    td
+                    td#mobile
                       p#gate=flightObj.gate[0]
                   if j === ""
                     td#center
@@ -266,9 +266,9 @@ block content
                     a#linkText(href="https://www.flightradar24.com/data/aircraft/" + y) #{x}
                   - var e = flightObj.callsign[0]
                   if e === ""
-                    td
+                    td#mobile
                       a#atcAir="—"
                   else
-                    td
+                    td#mobile
                       a#atcAir=flightObj.callsign[0]
                   - index++

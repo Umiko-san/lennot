@@ -13,6 +13,9 @@ body {
         display: block;
     }
 
+    .header{
+        display: none;
+    }
     #hideThis {
         display: none;
     }
@@ -130,13 +133,13 @@ body {
     }
 
     #orangefnt {
-        font-size: 2vw;
+        font-size: 6vw;
         color: #F6A400;
         font-weight: bold;
     }
 
     #orange {
-        font-size: 2vw;
+        font-size: 6vw;
         font-weight: bold;
         color: #ffffff;
         background-color: #F29401;
@@ -147,7 +150,7 @@ body {
     }
 
     #green {
-        font-size: 2vw;
+        font-size: 6vw;
         font-weight: bold;
         color: #ffffff;
         background-color: #358F38;
@@ -158,7 +161,7 @@ body {
     }
 
     #red {
-        font-size: 2vw;
+        font-size: 6vw;
         font-weight: bold;
         color: #ffffff;
         background-color: #E2001A;
@@ -169,20 +172,27 @@ body {
     }
 
     #gate {
-        font-size: 2vw;
+        font-size: 6vw;
         color: #ffffff;
         border: 2px solid white;
         font-weight: bold;
         text-align: center;
         padding: 5px;
+        background-color: #0302B5;
     }
-
+    .CellWithComment {
+        background-color: #0302B5;
+    }
+    #mobile {
+        background-color: #0302B5;
+        text-align: center;
+    }
     #gateDotted {
         border-bottom: 1px dotted;
     }
 
     #belt {
-        font-size: 2vw;
+        font-size: 6vw;
         border: 2px solid #151D41;
         background-color: #151D41;
         color: #F2ED77;
@@ -190,6 +200,7 @@ body {
         text-align: center;
         align-self: center;
         padding: 5px;
+        background-color: #0302B5;
     }
     /*#0302B5 depboard*/
     /*#F5FE3F gate*/
@@ -197,7 +208,7 @@ body {
     /*fonts*/
 
     #departed {
-        font-size: 2vw;
+        font-size: 6vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #ffffff;
@@ -209,7 +220,7 @@ body {
     }
 
     #delayed {
-        font-size: 2vw;
+        font-size: 6vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #F29401;
@@ -220,7 +231,7 @@ body {
     }
 
     #normalTime {
-        font-size: 2vw;
+        font-size: 6vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #ffffff;
@@ -231,7 +242,7 @@ body {
     }
 
     #early {
-        font-size: 2vw;
+        font-size: 6vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #358F38;
@@ -251,22 +262,25 @@ body {
 
     /*oranssi on #F29401*/
     #atcAir {
-        font-size: 2vw;
+        font-size: 6vw;
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
         vertical-align: super;
+        background-color: #0302B5;
     }
 
     .flight {
-        font-size: 2vw;
+        font-size: 6vw;
         color: #ffffff /*#EBFCA0*/;
         /*background-color: #0302B5;*/
         font-weight: bold;
+        background-color: #0302B5;
+        text-align: center;
     }
 
     #flightText {
         text-decoration: none;
-        font-size: 2vw;
+        font-size: 6vw;
         font-weight: bold;
         text-align: center;
         align-content: center;
@@ -279,43 +293,53 @@ body {
     }
 
     #time {
-        font-size: 2vw;
+        font-size: 6vw;
         color: #E3EE8E /*#EBFCA0*/;
         padding-bottom: 0px;
         font-weight: bold;
+        background-color: #0302B5;
+        text-align: center;
     }
 
     #destination {
-        font-size: 2vw;
+        font-size: 6vw;
         color: #E3EE8E /*#EBFCA0*/;
         word-break: break-word;
         font-weight: bold;
+        background-color: #0302B5;
+        text-align: center;
     }
 
     #destinationNotFound {
-        font-size: 2vw;
+        font-size: 6vw;
         color: #E3EE8E /*#EBFCA0*/;
         word-break: break-word;
         font-weight: bold;
         text-align: justify;
     }
+    #left {
+        background-color: #0302B5;
+        text-align: center;
+    }
 
+    #center {
+        background-color: #0302B5;
+        text-align: center;
+    }
     #registration {
-        font-size: 2vw;
+        font-size: 6vw;
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
-        vertical-align: super;
+        background-color: #0302B5;
+        text-align: center;
     }
 
     #linkText {
-        font-size: 2vw;
+        font-size: 6vw;
         font-weight: bold;
-        vertical-align: super;
+        text-align: center;
     }
 
-    tr:hover td {
-        background: #000
-    }
 
 }
 
@@ -488,7 +512,6 @@ body {
         font-size: 2vw;
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
-        vertical-align: super;
     }
 
     .flight {
