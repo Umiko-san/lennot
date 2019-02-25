@@ -176,7 +176,7 @@ block content
                   td#destination=flightObj.route_n_1[0]
                   - var n = flightObj.bltarea[0]
                   if n === ""
-                    td
+                    td#mobilecolor
                       p#belt="—"
                   else       
                     td#mobilecolor
@@ -203,9 +203,9 @@ block content
                     a#linkText(href="https://www.flightradar24.com/data/aircraft/" + y) #{x}
                   - var e = flightObj.callsign[0]
                   if e === ""
-                    td
+                    td#mobilecenter
                       a#atcAir="—"
                   else
-                    td
+                    td#mobilecenter
                       a#atcAir=flightObj.callsign[0]
                   - index++
