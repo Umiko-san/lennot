@@ -325,8 +325,13 @@
         font-size: 10px;
     }
 
-    .dpb {
-        display: block;
+    #myInput {
+        width: 222px;
+    }
+
+    #myTable {
+        table-layout: fixed;
+        width: 100%;
     }
 
     .container {
@@ -338,50 +343,25 @@
         padding: 0;
     }
 
-    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-
-    .dropdown {
-        margin: 0px;
-    }
-
-    .dropdown-menu {
-        max-height: 20rem;
-        overflow-y: auto;
-    }
-
-
-    .fill {
-        min-height: 100%;
-        height: 100%;
-    }
-
-    #myInput {
-        width: 222px;
-    }
-
-    /*
-    .defaultBackground {
-        background-color: #0302B5;
-    }
-    */
     #gate {
-        font-size: 3.8vw;
-        color: #000000;
-        background-color: #F5FE3F /*#F5FE3F*/;
+        font-size: 2.00vw;
+        color: #ffffff;
+        border: 2px solid white;
         font-weight: bold;
         text-align: center;
+        align-self: center;
+        padding: 5px;
     }
 
     #belt {
-        font-size: 3.8vw;
+        font-size: 2.00vw;
+        border: 2px solid #151D41;
         background-color: #151D41;
         color: #F2ED77;
         font-weight: bold;
         text-align: center;
+        align-self: center;
+        padding: 5px;
     }
     /*#0302B5 depboard*/
     /*#F5FE3F gate*/
@@ -389,36 +369,101 @@
     /*fonts*/
 
     #arrived {
-        font-size: 3.0vw;
+        font-size: 2.00vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #ffffff;
+        color: #000000;
         align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #delayed {
+        font-size: 2.00vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #F29401;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        min-width: 50px;
+    }
+
+    #normalTime {
+        font-size: 2.00vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #cnl {
+        font-size: 2.00vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #E2001A;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
     }
 
     #early {
-        font-size: 3.0vw;
-        border: 0px;
+        font-size: 2.00vw;
+        border: 1px solid black;
         font-weight: bold;
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
-        text-align: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
     }
     /*oranssi on #F29401*/
     #equipment {
-        font-size: 3.0vw;
+        font-size: 2.00vw;
         color: #ffffff /*#EBFCA0*/;
-        background-color: #0302B5;
         font-weight: bold;
         text-align: center;
     }
 
     .flight {
-        font-size: 3.0vw;
+        font-size: 2.00vw;
         color: #ffffff /*#EBFCA0*/;
-        background-color: #0302B5;
+        /*background-color: #0302B5;*/
         font-weight: bold;
+    }
+
+    #flightText {
+        text-decoration: none;
+        font-size: 2.00vw;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: text-bottom;
+        color: white;
+    }
+
+    #center {
+        text-align: center;
+    }
+
+    #left {
+        text-align: left;
+    }
+
+    /*oranssi on #F29401*/
+    #atcAir {
+        font-size: 2.00vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
     }
 
     .main {
@@ -427,70 +472,81 @@
     }
 
     #time {
-        font-size: 3.0vw;
+        font-size: 2.00vw;
         color: #E3EE8E /*#EBFCA0*/;
-        background-color: #0302B5;
+        padding-bottom: 0px;
         font-weight: bold;
     }
 
     #destination {
-        font-size: 3.0vw;
+        font-size: 2.00vw;
         color: #E3EE8E /*#EBFCA0*/;
-        background-color: #0302B5;
+        word-break: break-word;
         font-weight: bold;
     }
 
     #registration {
-        font-size: 2.0vw;
+        font-size: 2.00vw;
         color: #ffffff /*#EBFCA0*/;
-        background-color: #0302B5;
         font-weight: bold;
         text-align: center;
     }
 
     #linkText {
-        font-size: 3.0vw;
+        font-size: 2.00vw;
         font-weight: bold;
-        text-align: center;
-        vertical-align: text-bottom;
+        vertical-align: super;
+    }
+
+    tr:nth-child(even) {
+        background-color: #0248F5;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #5B91FD;
+    }
+
+    tr:hover td {
+        background: #000
+    }
+
+    .header:hover {
+        background: #000;
+        color: #ffffff;
     }
 }
 
 /*Ei valmis tabletit*/
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
-    .container {
-        padding: 0;
-        margin: 0;
+    #myInput {
+        width: 222px;
     }
 
-    body {
-        padding: 0;
-    }
-
-    table {
+    #myTable {
         table-layout: fixed;
-        width: 768px;
+        width: 100%;
     }
 
-    .defaultBackground {
-        background-color: #0302B5;
-        min-width: 50px;
-    }
     #gate {
-        font-size: 3.8vw;
-        color: #000000;
-        background-color: #F5FE3F /*#F5FE3F*/;
+        font-size: 1.5vw;
+        color: #ffffff;
+        border: 2px solid white;
         font-weight: bold;
         text-align: center;
+        align-self: center;
+        padding: 5px;
     }
 
     #belt {
-        font-size: 3.8vw;
+        font-size: 1.5vw;
+        border: 2px solid #151D41;
         background-color: #151D41;
         color: #F2ED77;
         font-weight: bold;
         text-align: center;
+        align-self: center;
+        padding: 5px;
     }
     /*#0302B5 depboard*/
     /*#F5FE3F gate*/
@@ -498,37 +554,101 @@
     /*fonts*/
 
     #arrived {
-        font-size: 3.0vw;
+        font-size: 1.5vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #ffffff;
+        color: #000000;
         align-self: center;
-        word-wrap: break-word;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #delayed {
+        font-size: 1.5vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #F29401;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        min-width: 50px;
+    }
+
+    #normalTime {
+        font-size: 1.5vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #cnl {
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #E2001A;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
     }
 
     #early {
-        font-size: 3.0vw;
-        border: 0px;
+        font-size: 1.5vw;
+        border: 1px solid black;
         font-weight: bold;
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
-        text-align: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
     }
     /*oranssi on #F29401*/
     #equipment {
-        font-size: 3.0vw;
+        font-size: 1.5vw;
         color: #ffffff /*#EBFCA0*/;
-        background-color: #0302B5;
         font-weight: bold;
         text-align: center;
     }
 
     .flight {
-        font-size: 3.0vw;
+        font-size: 1.5vw;
         color: #ffffff /*#EBFCA0*/;
-        background-color: #0302B5;
+        /*background-color: #0302B5;*/
         font-weight: bold;
+    }
+
+    #flightText {
+        text-decoration: none;
+        font-size: 1.5vw;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: text-bottom;
+        color: white;
+    }
+
+    #center {
+        text-align: center;
+    }
+
+    #left {
+        text-align: left;
+    }
+
+    /*oranssi on #F29401*/
+    #atcAir {
+        font-size: 1.5vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
     }
 
     .main {
@@ -537,38 +657,237 @@
     }
 
     #time {
-        font-size: 3.0vw;
+        font-size: 1.5vw;
         color: #E3EE8E /*#EBFCA0*/;
-        background-color: #0302B5;
+        padding-bottom: 0px;
         font-weight: bold;
     }
 
     #destination {
-        font-size: 3.0vw;
+        font-size: 1.5vw;
         color: #E3EE8E /*#EBFCA0*/;
-        background-color: #0302B5;
+        word-break: break-word;
         font-weight: bold;
-        word-wrap: break-word;
     }
 
     #registration {
         font-size: 1.5vw;
         color: #ffffff /*#EBFCA0*/;
-        background-color: #0302B5;
         font-weight: bold;
         text-align: center;
     }
 
     #linkText {
-        font-size: 3.0vw;
+        font-size: 1.5vw;
         font-weight: bold;
-        text-align: center;
-        vertical-align: text-bottom;
+        vertical-align: super;
+    }
+
+    tr:nth-child(even) {
+        background-color: #0248F5;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #5B91FD;
+    }
+
+    tr:hover td {
+        background: #000
+    }
+
+    .header:hover {
+        background: #000;
+        color: #ffffff;
     }
 }
 
 /*Ei valmis väärää*/
-@media only screen and (min-width: 768px) { /*Ei valmis*/
+@media only screen and (min-width: 769px) and (max-width: 1024px) { /*Ei valmis*/
+
+    /*background-color: #0302B5;*/
+
+    #myInput {
+        width: 222px;
+    }
+
+    #myTable {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    #gate {
+        font-size: 1.75vw;
+        color: #ffffff;
+        border: 2px solid white;
+        font-weight: bold;
+        text-align: center;
+        align-self: center;
+        padding: 5px;
+    }
+
+    #belt {
+        font-size: 1.75vw;
+        border: 2px solid #151D41;
+        background-color: #151D41;
+        color: #F2ED77;
+        font-weight: bold;
+        text-align: center;
+        align-self: center;
+        padding: 5px;
+    }
+    /*#0302B5 depboard*/
+    /*#F5FE3F gate*/
+
+    /*fonts*/
+
+    #arrived {
+        font-size: 1.75vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #delayed {
+        font-size: 1.75vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #F29401;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        min-width: 50px;
+    }
+
+    #normalTime {
+        font-size: 1.75vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #cnl {
+        font-size: 1.75vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #E2001A;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #early {
+        font-size: 1.75vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #358F38;
+        color: #ffffff;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+    /*oranssi on #F29401*/
+    #equipment {
+        font-size: 1.75vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .flight {
+        font-size: 1.75vw;
+        color: #ffffff /*#EBFCA0*/;
+        /*background-color: #0302B5;*/
+        font-weight: bold;
+    }
+
+    #flightText {
+        text-decoration: none;
+        font-size: 1.75vw;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: text-bottom;
+        color: white;
+    }
+
+    #center {
+        text-align: center;
+    }
+
+    #left {
+        text-align: left;
+    }
+
+    /*oranssi on #F29401*/
+    #atcAir {
+        font-size: 1.75vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    .main {
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+
+    #time {
+        font-size: 1.75vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        padding-bottom: 0px;
+        font-weight: bold;
+    }
+
+    #destination {
+        font-size: 1.75vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+    }
+
+    #registration {
+        font-size: 1.75vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #linkText {
+        font-size: 1.75vw;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    tr:nth-child(even) {
+        background-color: #0248F5;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #5B91FD;
+    }
+
+    tr:hover td {
+        background: #000
+    }
+    .header:hover {
+        background: #000;
+        color: #ffffff;
+    }
+}
+
+@media only screen and (min-width: 1025px) { /*Ei valmis*/
 
     /*background-color: #0302B5;*/
 
@@ -675,7 +994,7 @@
     .flight {
         font-size: 0.70vw;
         color: #ffffff /*#EBFCA0*/;
-        /*background-color: #0302B5;*/ 
+        /*background-color: #0302B5;*/
         font-weight: bold;
     }
 
@@ -747,10 +1066,11 @@
     tr:hover td {
         background: #000
     }
+
     .header:hover {
         background: #000;
         color: #ffffff;
     }
 }
 
-/*    .container.fluid*/
+    /*    .container.fluid*/
