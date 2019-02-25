@@ -1173,7 +1173,7 @@
     }
 
     #gate {
-        font-size: 1.75vw;
+        font-size: 1vw;
         color: #ffffff;
         border: 2px solid white;
         font-weight: bold;
@@ -1183,7 +1183,7 @@
     }
 
     #belt {
-        font-size: 1.75vw;
+        font-size: 1vw;
         border: 2px solid #151D41;
         background-color: #151D41;
         color: #F2ED77;
@@ -1198,7 +1198,7 @@
     /*fonts*/
 
     #arrived {
-        font-size: 1.75vw;
+        font-size: 1vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #ffffff;
@@ -1210,7 +1210,7 @@
     }
 
     #delayed {
-        font-size: 1.75vw;
+        font-size: 1vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #F29401;
@@ -1222,7 +1222,7 @@
     }
 
     #normalTime {
-        font-size: 1.75vw;
+        font-size: 1vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #ffffff;
@@ -1234,7 +1234,7 @@
     }
 
     #sameTime {
-        font-size: 1.75vw;
+        font-size: 1vw;
         border: 1px solid #ffffff;
         font-weight: bold;
         background-color: #0C2645;
@@ -1246,7 +1246,7 @@
     }
 
     #cnl {
-        font-size: 1.75vw;
+        font-size: 1vw;
         font-weight: bold;
         color: #ffffff;
         background-color: #E2001A;
@@ -1257,7 +1257,7 @@
     }
 
     #early {
-        font-size: 1.75vw;
+        font-size: 1vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #358F38;
@@ -1269,7 +1269,7 @@
     }
     /*oranssi on #F29401*/
     #equipment {
-        font-size: 1.75vw;
+        font-size: 1vw;
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
         text-align: center;
@@ -1284,7 +1284,7 @@
 
     #flightText {
         text-decoration: none;
-        font-size: 1.75vw;
+        font-size: 1vw;
         font-weight: bold;
         text-align: center;
         vertical-align: text-bottom;
@@ -1301,7 +1301,7 @@
 
     /*oranssi on #F29401*/
     #atcAir {
-        font-size: 1.75vw;
+        font-size: 1vw;
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
         vertical-align: super;
@@ -1313,28 +1313,28 @@
     }
 
     #time {
-        font-size: 1.75vw;
+        font-size: 1vw;
         color: #E3EE8E /*#EBFCA0*/;
         padding-bottom: 0px;
         font-weight: bold;
     }
 
     #destination {
-        font-size: 1.75vw;
+        font-size: 1vw;
         color: #E3EE8E /*#EBFCA0*/;
         word-break: break-word;
         font-weight: bold;
     }
 
     #registration {
-        font-size: 1.75vw;
+        font-size: 1vw;
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
         text-align: center;
     }
 
     #linkText {
-        font-size: 1.75vw;
+        font-size: 1vw;
         font-weight: bold;
         vertical-align: super;
     }
