@@ -1127,13 +1127,13 @@ body {
     }
 
     #orangefnt {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         color: #F6A400;
         font-weight: bold;
     }
 
     #orange {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         font-weight: bold;
         color: #ffffff;
         background-color: #F29401;
@@ -1144,7 +1144,7 @@ body {
     }
 
     #green {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         font-weight: bold;
         color: #ffffff;
         background-color: #358F38;
@@ -1155,7 +1155,7 @@ body {
     }
 
     #red {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         font-weight: bold;
         color: #ffffff;
         background-color: #E2001A;
@@ -1166,7 +1166,7 @@ body {
     }
 
     #gate {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         color: #ffffff;
         border: 2px solid white;
         font-weight: bold;
@@ -1179,7 +1179,7 @@ body {
     }
 
     #belt {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         border: 2px solid #151D41;
         background-color: #151D41;
         color: #F2ED77;
@@ -1194,7 +1194,7 @@ body {
     /*fonts*/
 
     #departed {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #ffffff;
@@ -1206,7 +1206,7 @@ body {
     }
 
     #delayed {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #F29401;
@@ -1217,7 +1217,7 @@ body {
     }
 
     #normalTime {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #ffffff;
@@ -1228,7 +1228,7 @@ body {
     }
 
     #early {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         border: 1px solid black;
         font-weight: bold;
         background-color: #358F38;
@@ -1248,14 +1248,14 @@ body {
 
     /*oranssi on #F29401*/
     #atcAir {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
         vertical-align: super;
     }
 
     .flight {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         color: #ffffff /*#EBFCA0*/;
         /*background-color: #0302B5;*/
         font-weight: bold;
@@ -1276,21 +1276,21 @@ body {
     }
 
     #time {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         color: #E3EE8E /*#EBFCA0*/;
         padding-bottom: 0px;
         font-weight: bold;
     }
 
     #destination {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         color: #E3EE8E /*#EBFCA0*/;
         word-break: break-word;
         font-weight: bold;
     }
 
     #destinationNotFound {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         color: #E3EE8E /*#EBFCA0*/;
         word-break: break-word;
         font-weight: bold;
@@ -1298,7 +1298,7 @@ body {
     }
 
     #registration {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
         vertical-align: super;
