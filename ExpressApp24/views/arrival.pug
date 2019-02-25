@@ -132,28 +132,31 @@ block content
                   - var z = flightObj.prt_f[0]
                   - var v = flightObj.est_d[0]
                   if z === "undefined"
-                    td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                    td#time=new Date(flightObj.sdt[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
                   else if z === "Myöhässä"
-                    td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                    td#time=new Date(flightObj.sdt[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
                       p#delayed="Myöhässä"
                   else if z === "Laskeutunut"
-                    td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                      p#normalTime=flightObj.prt_f[0] + " " + new Date(flightObj.act_d[0]).toString().slice(16,21)
+                    td#time=new Date(flightObj.sdt[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
+                      p#normalTime=flightObj.prt_f[0] + " " + new Date(flightObj.act_d[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
                   else if z === "Arvioitu aika"
                     if v !== ""
                     - var q = new Date(flightObj.est_d[0]).getTime()
                     - var p = new Date(flightObj.sdt[0]).getTime()
                       if q < p
-                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#early=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                        td#time=new Date(flightObj.sdt[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
+                          p#early=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
                       else if q > p
-                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#delayed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                        td#time=new Date(flightObj.sdt[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
+                          p#delayed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
                       else
-                        td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
-                          p#delayed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().slice(16,21)
+                        td#time=new Date(flightObj.sdt[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
+                          p#delayed=flightObj.prt_f[0] + " " + new Date(flightObj.est_d[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
+                  else if z === "Peruttu"
+                    td#time=new Date(flightObj.sdt[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
+                      p#cnl="Peruttu"
                   else
-                    td#time=new Date(flightObj.sdt[0]).toString().slice(16,21)
+                    td#time=new Date(flightObj.sdt[0]).toString().toLocaleString('en-US', { timeZone: 'Europe/Tallinn' }).slice(16,21)
                   - var h = flightObj.fltnr[0]
                   - var l = new String((flightObj.fltnr[0]).toLowerCase())
                   td.flight

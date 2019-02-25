@@ -506,6 +506,17 @@
         min-width: 50px;
     }
 
+    #cnl {
+        font-size: 0.70vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #E2001A;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
     #early {
         font-size: 0.70vw;
         border: 1px solid black;
