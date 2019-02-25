@@ -131,6 +131,10 @@ body {
         height: 100%;
     }
 
+    #paddingElement{
+        padding-left: 8px;
+    }
+
     #myInput {
         width: 222px;
     }
@@ -353,6 +357,10 @@ body {
         font-size: 10px;
     }
 
+    #paddingElement {
+        padding-left: 8px;
+    }
+
     .dpb {
         display: block;
     }
@@ -404,8 +412,9 @@ body {
         background-color: #F29401;
         align-self: center;
         word-break: break-word;
-        padding: 5px;
+        padding: 1px;
         border: 1px solid black;
+        min-width: 50px;
     }
 
     #green {
@@ -415,8 +424,9 @@ body {
         background-color: #358F38;
         align-self: center;
         word-break: break-word;
-        padding: 5px;
+        padding: 1px;
         border: 1px solid black;
+        min-width: 50px;
     }
 
     #red {
@@ -426,8 +436,9 @@ body {
         background-color: #E2001A;
         align-self: center;
         word-break: break-word;
-        padding: 5px;
+        padding: 1px;
         border: 1px solid black;
+        min-width: 50px;
     }
 
     #gate {
@@ -465,7 +476,7 @@ body {
         background-color: #ffffff;
         color: #000000;
         align-self: center;
-        padding: 5px;
+        padding: 1px;
         word-break: break-word;
         min-width: 50px;
     }
@@ -523,6 +534,7 @@ body {
         color: #ffffff /*#EBFCA0*/;
         /*background-color: #0302B5;*/
         font-weight: bold;
+        max-width: 31px;
     }
 
     #flightText {
@@ -549,8 +561,9 @@ body {
     #destination {
         font-size: 2vw;
         color: #E3EE8E /*#EBFCA0*/;
-        word-break: break-word;
         font-weight: bold;
+        word-break: break-word;
+        min-width: 50px;
     }
 
     #destinationNotFound {
@@ -596,6 +609,10 @@ body {
 
     .header {
         word-break: break-word;
+    }
+
+    #paddingElement {
+        padding-left: 8px;
     }
 
     .dpb {
@@ -842,6 +859,10 @@ body {
 
     .header {
         word-break: break-word;
+    }
+
+    #paddingElement {
+        padding-left: 8px;
     }
 
     .dpb {
@@ -1091,6 +1112,10 @@ body {
     table {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #paddingElement {
+        padding-left: 8px;
     }
 
     #myInput {
