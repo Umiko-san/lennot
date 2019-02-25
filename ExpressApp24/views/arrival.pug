@@ -155,13 +155,13 @@ block content
                     - dateEst = new Date(dateEst).toString().slice(16,21)
                     - console.log(dateEst + " " + dateAct + " " + dateStd)
                       if q < p
-                        td#time=dateStd.toString().slice(16,21)
+                        td#time=dateStd
                           p#early=flightObj.prt_f[0] + " " + dateEst
                       else if q > p
-                        td#time=dateStd.toString().slice(16,21)
+                        td#time=dateStd
                           p#delayed=flightObj.prt_f[0] + " " + dateEst
                       else
-                        td#time=dateStd.slice(16,21)
+                        td#time=dateStd
                           p#delayed=flightObj.prt_f[0] + " " + dateEst
                   else if z === "Peruttu"
                     td#time=dateStd
