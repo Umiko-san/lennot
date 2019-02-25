@@ -8,10 +8,1065 @@ body {
     background-color: #ffffff;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 413px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
 
-@media only screen and (min-width: 768px) { /*Ei valmis*/
+    #hideThis {
+        display: none;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        display: none;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 10px solid #ccc;
+        border-style: inset;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+        td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+
+        /*
+	Label the data
+	*/
+        td:nth-of-type(1):before {
+            content: "";
+        }
+
+        td:nth-of-type(2):before {
+            content: "";
+        }
+
+        td:nth-of-type(3):before {
+            content: "";
+        }
+
+        td:nth-of-type(4):before {
+            content: "";
+        }
+
+        td:nth-of-type(5):before {
+            content: "";
+        }
+
+        td:nth-of-type(6):before {
+            content: "";
+        }
+
+        td:nth-of-type(7):before {
+            content: "";
+        }
+
+        td:nth-of-type(8):before {
+            content: "";
+        }
+
+        td:nth-of-type(9):before {
+            content: "";
+        }
+
+        td:nth-of-type(10):before {
+            content: "";
+        }
+
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .dropdown {
+        margin: 0px;
+    }
+
+    .dropdown-menu {
+        max-height: 20rem;
+        overflow-y: auto;
+    }
+
+    .defaultBackground {
+        background-color: #0302B5;
+    }
+
+    .fill {
+        min-height: 100%;
+        height: 100%;
+    }
+
+    #myInput {
+        width: 222px;
+    }
+
+    #orangefnt {
+        font-size: 2vw;
+        color: #F6A400;
+        font-weight: bold;
+    }
+
+    #orange {
+        font-size: 2vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #F29401;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #green {
+        font-size: 2vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #358F38;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #red {
+        font-size: 2vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #E2001A;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #gate {
+        font-size: 2vw;
+        color: #ffffff;
+        border: 2px solid white;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #gateDotted {
+        border-bottom: 1px dotted;
+    }
+
+    #belt {
+        font-size: 2vw;
+        border: 2px solid #151D41;
+        background-color: #151D41;
+        color: #F2ED77;
+        font-weight: bold;
+        text-align: center;
+        align-self: center;
+        padding: 5px;
+    }
+    /*#0302B5 depboard*/
+    /*#F5FE3F gate*/
+
+    /*fonts*/
+
+    #departed {
+        font-size: 2vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #delayed {
+        font-size: 2vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #F29401;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #normalTime {
+        font-size: 2vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #early {
+        font-size: 2vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #358F38;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #center {
+        text-align: center;
+    }
+
+    #left {
+        text-align: left;
+    }
+
+    /*oranssi on #F29401*/
+    #atcAir {
+        font-size: 2vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    .flight {
+        font-size: 2vw;
+        color: #ffffff /*#EBFCA0*/;
+        /*background-color: #0302B5;*/
+        font-weight: bold;
+    }
+
+    #flightText {
+        text-decoration: none;
+        font-size: 2vw;
+        font-weight: bold;
+        text-align: center;
+        align-content: center;
+        color: white;
+    }
+
+    .main {
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+
+    #time {
+        font-size: 2vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        padding-bottom: 0px;
+        font-weight: bold;
+    }
+
+    #destination {
+        font-size: 2vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+    }
+
+    #destinationNotFound {
+        font-size: 2vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+        text-align: justify;
+    }
+
+    #registration {
+        font-size: 2vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    #linkText {
+        font-size: 2vw;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    tr:hover td {
+        background: #000
+    }
+
+}
+
+@media only screen and (min-width: 414px) and (max-width: 575px) {
+    .header {
+        word-break: break-word;
+        font-size: 10px;
+    }
+
+    .dpb {
+        display: block;
+    }
+
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .dropdown {
+        margin: 0px;
+    }
+
+    .dropdown-menu {
+        max-height: 20rem;
+        overflow-y: auto;
+    }
+
+
+    .fill {
+        min-height: 100%;
+        height: 100%;
+    }
+
+    #myInput {
+        width: 222px;
+    }
+
+    #orangefnt {
+        font-size: 2vw;
+        color: #F6A400;
+        font-weight: bold;
+    }
+
+    #orange {
+        font-size: 2vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #F29401;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #green {
+        font-size: 2vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #358F38;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #red {
+        font-size: 2vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #E2001A;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #gate {
+        font-size: 2vw;
+        color: #ffffff;
+        border: 2px solid white;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #gateDotted {
+        border-bottom: 1px dotted;
+    }
+
+    #belt {
+        font-size: 2vw;
+        border: 2px solid #151D41;
+        background-color: #151D41;
+        color: #F2ED77;
+        font-weight: bold;
+        text-align: center;
+        align-self: center;
+        padding: 5px;
+    }
+    /*#0302B5 depboard*/
+    /*#F5FE3F gate*/
+
+    /*fonts*/
+
+    #departed {
+        font-size: 2vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #delayed {
+        font-size: 2vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #F29401;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #normalTime {
+        font-size: 2vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #early {
+        font-size: 2vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #358F38;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #center {
+        text-align: center;
+    }
+
+    #left {
+        text-align: left;
+    }
+
+    /*oranssi on #F29401*/
+    #atcAir {
+        font-size: 2vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    .flight {
+        font-size: 2vw;
+        color: #ffffff /*#EBFCA0*/;
+        /*background-color: #0302B5;*/
+        font-weight: bold;
+    }
+
+    #flightText {
+        text-decoration: none;
+        font-size: 2vw;
+        font-weight: bold;
+        text-align: center;
+        align-content: center;
+        color: white;
+    }
+
+    .main {
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+
+    #time {
+        font-size: 2vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        padding-bottom: 0px;
+        font-weight: bold;
+    }
+
+    #destination {
+        font-size: 2vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+    }
+
+    #destinationNotFound {
+        font-size: 2vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+        text-align: justify;
+    }
+
+    #registration {
+        font-size: 2vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    #linkText {
+        font-size: 2vw;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    tr:nth-child(even) {
+        background-color: #0248F5;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #5B91FD;
+    }
+
+    .header:hover {
+        background: #000;
+        color: #ffffff;
+    }
+
+    tr:hover td {
+        background: #000
+    }
+}
+
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+
+    .header {
+        word-break: break-word;
+    }
+
+    .dpb {
+        display: block;
+    }
+
+    .container {
+        padding: 5px;
+        margin: auto;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    .dropdown {
+        margin: 0px;
+    }
+
+    .dropdown-menu {
+        max-height: 20rem;
+        overflow-y: auto;
+    }
+
+
+    .fill {
+        min-height: 100%;
+        height: 100%;
+    }
+
+    #myInput {
+        width: 222px;
+    }
+
+    #orangefnt {
+        font-size: 1.5vw;
+        color: #F6A400;
+        font-weight: bold;
+    }
+
+    #orange {
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #F29401;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #green {
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #358F38;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #red {
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #E2001A;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #gate {
+        font-size: 1.5vw;
+        color: #ffffff;
+        border: 2px solid white;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #gateDotted {
+        border-bottom: 1px dotted;
+    }
+
+    #belt {
+        font-size: 1.5vw;
+        border: 2px solid #151D41;
+        background-color: #151D41;
+        color: #F2ED77;
+        font-weight: bold;
+        text-align: center;
+        align-self: center;
+        padding: 5px;
+    }
+    /*#0302B5 depboard*/
+    /*#F5FE3F gate*/
+
+    /*fonts*/
+
+    #departed {
+        font-size: 1.5vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #delayed {
+        font-size: 1.5vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #F29401;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #normalTime {
+        font-size: 1.5vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #early {
+        font-size: 1.5vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #358F38;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #center {
+        text-align: center;
+    }
+
+    #left {
+        text-align: left;
+    }
+
+    /*oranssi on #F29401*/
+    #atcAir {
+        font-size: 1.5vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    .flight {
+        font-size: 1.5vw;
+        color: #ffffff /*#EBFCA0*/;
+        /*background-color: #0302B5;*/
+        font-weight: bold;
+    }
+
+    #flightText {
+        text-decoration: none;
+        font-size: 1.5vw;
+        font-weight: bold;
+        text-align: center;
+        align-content: center;
+        color: white;
+    }
+
+    .main {
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+
+    #time {
+        font-size: 1.5vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        padding-bottom: 0px;
+        font-weight: bold;
+    }
+
+    #destination {
+        font-size: 1.5vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+    }
+
+    #destinationNotFound {
+        font-size: 1.5vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+        text-align: justify;
+    }
+
+    #registration {
+        font-size: 1.5vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    #linkText {
+        font-size: 1.5vw;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    tr:nth-child(even) {
+        background-color: #0248F5;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #5B91FD;
+    }
+
+    .header:hover {
+        background: #000;
+        color: #ffffff;
+    }
+
+    tr:hover td {
+        background: #000
+    }
+}
+
+
+@media only screen and (min-width:769px) and (max-width:1024px){
+
+    .header {
+        word-break: break-word;
+    }
+
+    .dpb {
+        display: block;
+    }
+
+    .container {
+        padding: 5px;
+        margin: auto;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    .dropdown {
+        margin: 0px;
+    }
+
+    .dropdown-menu {
+        max-height: 20rem;
+        overflow-y: auto;
+    }
+
+
+    .fill {
+        min-height: 100%;
+        height: 100%;
+    }
+
+    #myInput {
+        width: 222px;
+    }
+
+    #orangefnt {
+        font-size: 1.75vw;
+        color: #F6A400;
+        font-weight: bold;
+    }
+
+    #orange {
+        font-size: 1.75vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #F29401;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #green {
+        font-size: 1.75vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #358F38;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #red {
+        font-size: 1.75vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #E2001A;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #gate {
+        font-size: 1.75vw;
+        color: #ffffff;
+        border: 2px solid white;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #gateDotted {
+        border-bottom: 1px dotted;
+    }
+
+    #belt {
+        font-size: 1.75vw;
+        border: 2px solid #151D41;
+        background-color: #151D41;
+        color: #F2ED77;
+        font-weight: bold;
+        text-align: center;
+        align-self: center;
+        padding: 5px;
+    }
+    /*#0302B5 depboard*/
+    /*#F5FE3F gate*/
+
+    /*fonts*/
+
+    #departed {
+        font-size: 1.75vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #delayed {
+        font-size: 1.75vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #F29401;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #normalTime {
+        font-size: 1.75vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #early {
+        font-size: 1.75vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #358F38;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #center {
+        text-align: center;
+    }
+
+    #left {
+        text-align: left;
+    }
+
+    /*oranssi on #F29401*/
+    #atcAir {
+        font-size: 1.75vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    .flight {
+        font-size: 1.75vw;
+        color: #ffffff /*#EBFCA0*/;
+        /*background-color: #0302B5;*/
+        font-weight: bold;
+    }
+
+    #flightText {
+        text-decoration: none;
+        font-size: 1.75vw;
+        font-weight: bold;
+        text-align: center;
+        align-content: center;
+        color: white;
+    }
+
+    .main {
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+
+    #time {
+        font-size: 1.75vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        padding-bottom: 0px;
+        font-weight: bold;
+    }
+
+    #destination {
+        font-size: 1.75vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+    }
+
+    #destinationNotFound {
+        font-size: 1.75vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+        text-align: justify;
+    }
+
+    #registration {
+        font-size: 1.75vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    #linkText {
+        font-size: 1.75vw;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    tr:nth-child(even) {
+        background-color: #0248F5;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #5B91FD;
+    }
+
+    .header:hover {
+        background: #000;
+        color: #ffffff;
+    }
+
+    tr:hover td {
+        background: #000
+    }
+}
+
+@media only screen and (min-width: 1025px) { /*Ei valmis*/
 
     /*background-color: #0302B5;*/
+
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     #myInput {
         width: 222px;
@@ -218,6 +1273,7 @@ body {
         background: #000;
         color: #ffffff;
     }
+
     tr:hover td {
         background: #000
     }
