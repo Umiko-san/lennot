@@ -338,8 +338,8 @@
         word-break: break-word;
         font-size: 10px;
     }
-    #limit{
-        width: 60px;
+    #limit {
+        width: 64px;
     }
 
     #paddingElement {
@@ -396,9 +396,8 @@
         background-color: #ffffff;
         color: #000000;
         align-self: center;
-        padding: 0.5px;
+        padding: 1px;
         word-break: break-word;
-        min-width: 50px;
     }
 
     #delayed {
@@ -409,8 +408,7 @@
         color: #ffffff;
         align-self: center;
         word-break: break-word;
-        padding: 0.5px;
-        min-width: 50px;
+        padding: 1px;
     }
 
     #sameTime {
@@ -420,9 +418,8 @@
         background-color: #0C2645;
         color: #ffffff;
         align-self: center;
-        padding: 0.5px;
+        padding: 1px;
         word-break: break-word;
-        min-width: 50px;
     }
 
     #normalTime {
@@ -432,9 +429,8 @@
         background-color: #ffffff;
         color: #000000;
         align-self: center;
-        padding: 0.5px;
+        padding: 1px;
         word-break: break-word;
-        min-width: 50px;
     }
 
     #cnl {
@@ -444,9 +440,8 @@
         background-color: #E2001A;
         align-self: center;
         word-break: break-word;
-        padding: 0.5px;
+        padding: 1px;
         border: 1px solid black;
-        min-width: 50px;
     }
 
     #early {
@@ -456,9 +451,8 @@
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
-        padding: 0.5px;
+        padding: 1px;
         word-break: break-word;
-        min-width: 50px;
     }
     /*oranssi on #F29401*/
     #equipment {
@@ -511,7 +505,6 @@
         color: #E3EE8E /*#EBFCA0*/;
         padding-bottom: 0px;
         font-weight: bold;
-        max-width: 80px;
     }
 
     #destination {
@@ -565,6 +558,10 @@
         padding-left: 8px;
     }
 
+    #limit {
+        width: 62px;
+    }
+
     .header{
         font-size: 12px;
     }
@@ -607,7 +604,6 @@
         align-self: center;
         padding: 5px;
         word-break: break-word;
-        min-width: 50px;
     }
 
     #delayed {
@@ -619,7 +615,6 @@
         align-self: center;
         word-break: break-word;
         padding: 5px;
-        min-width: 50px;
     }
 
     #normalTime {
@@ -631,7 +626,6 @@
         align-self: center;
         padding: 5px;
         word-break: break-word;
-        min-width: 50px;
     }
 
     #sameTime {
@@ -643,7 +637,6 @@
         align-self: center;
         padding: 5px;
         word-break: break-word;
-        min-width: 50px;
     }
 
     #cnl {
@@ -666,7 +659,6 @@
         align-self: center;
         padding: 5px;
         word-break: break-word;
-        min-width: 50px;
     }
     /*oranssi on #F29401*/
     #equipment {
