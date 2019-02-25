@@ -150,7 +150,7 @@ block content
                         strike(style='color:black')
                           span(style='color:#E3EE8E')=dateStd
                         p#orangefnt=dateEst
-                          p#departed=flightObj.prt_f[0] + " " + dateAblk + " +" + j
+                          p#orange=flightObj.prt_f[0] + " " + dateAblk + " +" + j
                     else if m === "Arvioitu aika"
                       if a < b
                         td#time
@@ -188,12 +188,11 @@ block content
                             span(style='color:#E3EE8E')=dateStd
                           p#orangefnt=dateEst
                             p#red=flightObj.prt_f[0]
-                    else if m !== ""
+                    else
                         td#time
                           strike(style='color:black')
                             span(style='color:#E3EE8E')=dateStd
                           p#orangefnt=dateEst
-                            p#departed=flightObj.prt_f[0] + " " + dateAblk                 
                   else
                     if m === "Arvioitu aika" && j > 0
                       td#time=dateStd
