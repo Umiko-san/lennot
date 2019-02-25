@@ -179,14 +179,14 @@ block content
                     td
                       p#belt="—"
                   else       
-                    td
+                    td#mobilecolor
                       p#belt=flightObj.bltarea[0]
                   - var o = flightObj.park[0]
                   if o === ""
-                    td
+                    td#mobilecolor
                       p#gate="—"
                   else
-                    td
+                    td#mobilecolor
                       p#gate=flightObj.park[0]
                   - var j = flightObj.actype[0]
                   if j === ""

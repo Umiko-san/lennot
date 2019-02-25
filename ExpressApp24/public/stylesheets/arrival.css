@@ -16,13 +16,17 @@
     background-color: #0302B5;
 }
 */
-@media only screen and (max-width: 360px) { /*Galaxy S5*/
+@media only screen and (max-width: 360px) and (max-width: 440px) { /*Galaxy S5*/
 
     table, thead, tbody, th, td, tr {
         display: block;
     }
 
-    #hideThis{
+    #hideThis {
+        display: none;
+    }
+
+    .header {
         display: none;
     }
     /* Hide table headers (but not display: none;, for accessibility) */
@@ -57,7 +61,7 @@
             white-space: nowrap;
         }
 
-  
+
         /*
 	Label the data
 	*/
@@ -128,6 +132,7 @@
     .defaultBackground {
         background-color: #0302B5;
     }
+
     .fill {
         min-height: 100%;
         height: 100%;
@@ -152,6 +157,10 @@
     /*#F5FE3F gate*/
 
     /*fonts*/
+
+    #mobilecolor {
+        background-color: #0302B5;
+    }
 
     #arrived {
         font-size: 6.0vw;
@@ -226,7 +235,7 @@
 }
 
 /*Ei valmis väärää*/
-@media only screen and (min-width: 361px) and (max-width: 640px) {
+@media only screen and (min-width: 441px) and (max-width: 640px) {
 
     .defaultBackground {
         background-color: #0302B5;
