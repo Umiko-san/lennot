@@ -8,7 +8,7 @@ body {
     background-color: #ffffff;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 413px) {
+@media only screen and (min-width: 320px) and (max-width: 410px) {
     table, thead, tbody, th, td, tr {
         display: block;
     }
@@ -319,7 +319,7 @@ body {
 
 }
 
-@media only screen and (min-width: 414px) and (max-width: 575px) {
+@media only screen and (min-width: 411px) and (max-width: 575px) {
     .header {
         word-break: break-word;
         font-size: 10px;
