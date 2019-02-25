@@ -16,7 +16,7 @@
     background-color: #0302B5;
 }
 */
-@media only screen and (min-width: 320px) and (max-width: 410px) { /*Galaxy S5*/
+@media only screen and (min-width: 1px) and (max-width: 410px) { /*Galaxy S5*/
 
     table, thead, tbody, th, td, tr {
         display: block;
