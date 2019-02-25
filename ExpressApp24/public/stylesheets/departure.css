@@ -57,7 +57,6 @@ body {
         border: 2px solid white;
         font-weight: bold;
         text-align: center;
-        align-self: center;
         padding: 5px;
     }
 
@@ -126,6 +125,14 @@ body {
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
         text-align: center;
+        vertical-align: super;
+    }
+
+    #atc {
+        font-size: 0.70vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
     }
 
     .flight {
@@ -140,7 +147,7 @@ body {
         font-size: 0.70vw;
         font-weight: bold;
         text-align: center;
-        vertical-align: text-bottom;
+        align-content: center;
         color: white;
     }
 
@@ -175,13 +182,12 @@ body {
         font-size: 0.70vw;
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
-        text-align: center;
+        vertical-align: super;
     }
 
     #linkText {
         font-size: 0.70vw;
         font-weight: bold;
-        text-align: center;
         vertical-align: text-bottom;
     }
 
@@ -193,6 +199,10 @@ body {
         background-color: #5B91FD;
     }
 
+    .header:hover {
+        background: #000;
+        color: #ffffff;
+    }
     tr:hover td {
         background: #000
     }

@@ -107,22 +107,22 @@ block content
       .table-responsive
         table#myTable.table.table-hover
           tbody
-            td 
+            td.header 
               b Aika
-            td 
+            td.header 
               b Lento
-            td 
+            td.header 
               b Kohde
-            td 
+            td.header 
               b Terminaali
-            td 
+            td.header 
               b Portti
-            td 
-              b Konetyyppi
-            td
+            td.header 
+              b Kone
+            td.header
               b Tunnus
-            td
-              b Kutsumerkki
+            td.header
+              b Merkki
               -var index = 0
               each flightObj in flightlist
                 tr
@@ -246,7 +246,7 @@ block content
                     a#linkText(href="https://www.flightradar24.com/data/aircraft/" + y) #{x}
                   - var e = flightObj.callsign[0]
                   if e === ""
-                    td#equipment="—"
+                    td#atc="—"
                   else
-                    td#equipment=flightObj.callsign[0]
+                    td#atc=flightObj.callsign[0]
                   - index++

@@ -434,7 +434,11 @@
 /*Ei valmis väärää*/
 @media only screen and (min-width: 768px) { /*Ei valmis*/
 
-    /*background-color: #0302B5;*/ 
+    /*background-color: #0302B5;*/
+
+    #myInput {
+        width: 222px;
+    }
 
     #myTable {
         table-layout: fixed;
@@ -486,6 +490,7 @@
         color: #ffffff;
         align-self: center;
         word-break: break-word;
+        padding: 5px;
         min-width: 50px;
     }
 
@@ -496,6 +501,7 @@
         background-color: #ffffff;
         color: #000000;
         align-self: center;
+        padding: 5px;
         word-break: break-word;
         min-width: 50px;
     }
@@ -507,6 +513,7 @@
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
+        padding: 5px;
         word-break: break-word;
         min-width: 50px;
     }
@@ -578,7 +585,10 @@
     tr:hover td {
         background: #000
     }
-
+    .header:hover {
+        background: #000;
+        color: #ffffff;
+    }
 }
 
 /*    .container.fluid*/
