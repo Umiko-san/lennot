@@ -1,6 +1,6 @@
 ﻿body {
+   
 }
-
 
 figure {
     float: right;
@@ -12,4 +12,9 @@ figure {
     border: thin silver solid;
     margin: 0.5em;
     padding: 0.5em;
+}
+
+#mobilePadding{
+    padding-left: 8px;
+    padding-right: 8px;
 }

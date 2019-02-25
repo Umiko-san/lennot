@@ -8,3 +8,8 @@ img {
     width: 108px;
     height: 33px;
 }
+
+#mobilePadding {
+    padding-left: 8px;
+    padding-right: 8px;
+}

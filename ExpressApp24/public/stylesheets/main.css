@@ -36,6 +36,9 @@ img {
 @media only screen and (max-width: 550px) { /*Galaxy S5*/
 
 
+    #fnt{
+        padding-left: 92px;
+    }
     .dpb {
         display: block;
     }
