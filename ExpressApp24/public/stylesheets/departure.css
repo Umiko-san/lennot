@@ -1328,8 +1328,7 @@ body {
     }
 }
 
-
-@media only screen and (min-width: 1337px) { /*Ei valmis*/
+@media only screen and (min-width: 1337px) and (max-with:1920px) { /*Ei valmis*/
 
     /*background-color: #0302B5;*/
 
@@ -1553,6 +1552,229 @@ body {
     }
 }
 
+@media only screen and (min-width: 1921px) { /*Ei valmis*/
+
+    /*background-color: #0302B5;*/
+
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #paddingElement {
+        padding-left: 8px;
+    }
+
+    #myInput {
+        width: 222px;
+    }
+
+    #myTable {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    #orangefnt {
+        font-size: 0.7vw;
+        color: #F6A400;
+        font-weight: bold;
+    }
+
+    #orange {
+        font-size: 0.7vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #F29401;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #green {
+        font-size: 0.7vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #358F38;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #red {
+        font-size: 0.7vw;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #E2001A;
+        align-self: center;
+        word-break: break-word;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    #gate {
+        font-size: 0.7vw;
+        color: #ffffff;
+        border: 2px solid white;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #gateDotted {
+        border-bottom: 1px dotted;
+    }
+
+    #belt {
+        font-size: 0.7vw;
+        border: 2px solid #151D41;
+        background-color: #151D41;
+        color: #F2ED77;
+        font-weight: bold;
+        text-align: center;
+        align-self: center;
+        padding: 5px;
+    }
+    /*#0302B5 depboard*/
+    /*#F5FE3F gate*/
+
+    /*fonts*/
+
+    #departed {
+        font-size: 0.7vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        padding: 5px;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #delayed {
+        font-size: 0.7vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #F29401;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #normalTime {
+        font-size: 0.7vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #ffffff;
+        color: #000000;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #early {
+        font-size: 0.7vw;
+        border: 1px solid black;
+        font-weight: bold;
+        background-color: #358F38;
+        color: #ffffff;
+        align-self: center;
+        word-break: break-word;
+        min-width: 50px;
+    }
+
+    #center {
+        text-align: center;
+    }
+
+    #left {
+        text-align: left;
+    }
+
+    /*oranssi on #F29401*/
+    #atcAir {
+        font-size: 0.7vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    .flight {
+        font-size: 0.7vw;
+        color: #ffffff /*#EBFCA0*/;
+        /*background-color: #0302B5;*/
+        font-weight: bold;
+    }
+
+    #flightText {
+        text-decoration: none;
+        font-size: 0.7vw;
+        font-weight: bold;
+        text-align: center;
+        align-content: center;
+        color: white;
+    }
+
+    .main {
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+
+    #time {
+        font-size: 0.7vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        padding-bottom: 0px;
+        font-weight: bold;
+    }
+
+    #destination {
+        font-size: 0.7vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+    }
+
+    #destinationNotFound {
+        font-size: 0.7vw;
+        color: #E3EE8E /*#EBFCA0*/;
+        word-break: break-word;
+        font-weight: bold;
+        text-align: justify;
+    }
+
+    #registration {
+        font-size: 0.7vw;
+        color: #ffffff /*#EBFCA0*/;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    #linkText {
+        font-size: 0.7vw;
+        font-weight: bold;
+        vertical-align: super;
+    }
+
+    tr:nth-child(even) {
+        background-color: #0248F5;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #5B91FD;
+    }
+
+    .header:hover {
+        background: #000;
+        color: #ffffff;
+    }
+
+    tr:hover td {
+        background: #000
+    }
+}
 
 .CellWithComment {
     position: relative;
