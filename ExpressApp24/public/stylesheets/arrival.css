@@ -16,7 +16,7 @@
     background-color: #0302B5;
 }
 */
-@media only screen and (max-width: 360px) and (max-width: 440px) { /*Galaxy S5*/
+@media only screen and (max-width: 320px) and (max-width: 413px) { /*Galaxy S5*/
 
     table, thead, tbody, th, td, tr {
         display: block;
@@ -235,12 +235,56 @@
 }
 
 /*Ei valmis väärää*/
-@media only screen and (min-width: 441px) and (max-width: 640px) {
+@media only screen and (min-width: 441px) and (max-width: 575px) {
 
+    .header {
+        word-break: break-word;
+        font-size: 10px;
+    }
+
+    .dpb {
+        display: block;
+    }
+
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .dropdown {
+        margin: 0px;
+    }
+
+    .dropdown-menu {
+        max-height: 20rem;
+        overflow-y: auto;
+    }
+
+
+    .fill {
+        min-height: 100%;
+        height: 100%;
+    }
+
+    #myInput {
+        width: 222px;
+    }
+
+    /*
     .defaultBackground {
         background-color: #0302B5;
     }
-
+    */
     #gate {
         font-size: 3.8vw;
         color: #000000;
@@ -330,7 +374,7 @@
 }
 
 /*Ei valmis tabletit*/
-@media only screen and (min-width: 641px) and (max-width: 768px) {
+@media only screen and (min-width: 576px) and (max-width: 768px) {
 
     .container {
         padding: 0;
