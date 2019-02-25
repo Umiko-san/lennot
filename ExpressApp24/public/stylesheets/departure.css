@@ -70,6 +70,10 @@ body {
         padding: 5px;
     }
 
+    #gateDotted {
+        border-bottom: 1px dotted;
+    }
+
     #belt {
         font-size: 0.70vw;
         border: 2px solid #151D41;
@@ -217,4 +221,28 @@ body {
     tr:hover td {
         background: #000
     }
+}
+
+.CellWithComment {
+    position: relative;
+}
+
+.CellComment {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    border: 1px;
+    background-color: white;
+    border-style: solid;
+    font-weight: bold;
+    border-width: 1px;
+    border-color: red;
+    padding: 3px;
+    color: black;
+    top: 20px;
+    left: 20px;
+}
+
+.CellWithComment:hover span.CellComment {
+    display: block;
 }

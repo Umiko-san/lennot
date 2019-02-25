@@ -136,13 +136,11 @@ block content
                   - var dateStd = temp.setHours(temp.getHours() + 2)
                   - dateStd = new Date(dateStd).toString().slice(16,21)
                   - var temp2 = new Date(flightObj.act_d[0])
-                  - console.log(temp2)
                   - var dateAct = temp2.setHours(temp2.getHours() + 2)
                   - dateAct = new Date(dateAct).toString().slice(16,21)
                   - var temp3 = new Date(flightObj.est_d[0])
                   - var dateEst = temp3.setHours(temp3.getHours() + 2)
                   - dateEst = new Date(dateEst).toString().slice(16,21)
-                  - console.log(dateEst + " " + dateAct + " " + dateStd)
                   - var temp4 = new Date(flightObj.ablk_d[0])
                   - var dateAblk = temp4.setHours(temp4.getHours() + 2)
                   - dateAblk = new Date(dateAblk).toString().slice(16,21)
@@ -241,13 +239,19 @@ block content
                     td#destination=flightObj.chkarea[0]
                   else
                     td#destinationNotFound=""
-                  - var n = flightObj.park[0]
-                  if n === ""
+                  - var n = flightObj.gate[0]
+                  - var f = flightObj.park[0]
+                  if n != f && n != "" && f != ""
+                    td.CellWithComment
+                      p#gate                     
+                        a#gateDotted=flightObj.gate[0]
+                      span.CellComment Remote stand #{f}
+                  else if n === ""
                     td
                       p#gate="—"
                   else
                     td
-                      p#gate=flightObj.park[0]
+                      p#gate=flightObj.gate[0]
                   if j === ""
                     td#center
                       a#atcAir="—"

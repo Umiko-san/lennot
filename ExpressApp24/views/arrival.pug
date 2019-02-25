@@ -135,7 +135,6 @@ block content
                   - var dateStd = temp.setHours(temp.getHours() + 2)
                   - dateStd = new Date(dateStd).toString().slice(16,21)
                   - var temp2 = new Date(flightObj.act_d[0])
-                  - console.log(temp2)
                   - var dateAct = temp2.setHours(temp2.getHours() + 2)
                   - dateAct = new Date(dateAct).toString().slice(16,21)
                   if z === "undefined"
@@ -156,7 +155,6 @@ block content
                     - var temp3 = new Date(flightObj.est_d[0])
                     - var dateEst = temp3.setHours(temp3.getHours() + 2)
                     - dateEst = new Date(dateEst).toString().slice(16,21)
-                    - console.log(dateEst + " " + dateAct + " " + dateStd)
                       if q < p
                         td#time=dateStd
                           p#early=flightObj.prt_f[0] + " " + dateEst
