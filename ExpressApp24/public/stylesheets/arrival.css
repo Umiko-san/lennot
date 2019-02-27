@@ -33,8 +33,9 @@
 }
 
 #paddingElement2 {
-    padding-left: 54px;
-    padding-bottom: 8px;
+    padding-left: 56px;
+    padding-bottom: 16px;
+    font-size: 16px;
 }
 
 #paddingElement3 {
@@ -43,6 +44,10 @@
     padding-bottom: 8px;
 }
 
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none !important;
+}
 
 @media only screen and (min-width: 1px) and (max-width: 410px) { /*Galaxy S5*/
 
@@ -1617,4 +1622,68 @@
     }
 }
 
-    /*    .container.fluid*/
+.conttainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /* Hide the browser's default checkbox */
+    .conttainer input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    left: 30px;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.conttainer:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.conttainer input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.conttainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.conttainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
