@@ -666,6 +666,7 @@
         color: #000000;
         align-self: center;
         padding: 5px;
+        -ms-word-break: break-all;
         word-break: break-word;
     }
 
