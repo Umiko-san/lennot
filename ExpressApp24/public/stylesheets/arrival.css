@@ -28,20 +28,21 @@
 }
 
 
-/*
-.dropdown {
-    margin: 20px;
+#paddingMagnifier {
+    padding-right: 8px;
 }
 
-.dropdown-menu {
-    max-height: 20rem;
-    overflow-y: auto;
+#paddingElement2 {
+    padding-left: 29.7px;
+    padding-bottom: 8px;
 }
 
-.defaultBackground {
-    background-color: #0302B5;
+#paddingElement3 {
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
 }
-*/
+
 @media only screen and (min-width: 1px) and (max-width: 410px) { /*Galaxy S5*/
 
     table, thead, tbody, th, td, tr {
@@ -62,6 +63,11 @@
     .header {
         display: none;
     }
+
+    #myInput {
+        width: 222px;
+    }
+
     /* Hide table headers (but not display: none;, for accessibility) */
     thead tr {
         position: absolute;

@@ -8,8 +8,23 @@ body {
     background-color: #ffffff;
 }
 
-@media only screen and (min-width: 1px) and (max-width: 410px) {
+#paddingMagnifier{
+    padding-right: 8px;
+}
 
+#paddingElement2{
+    padding-left: 29.7px;
+    padding-bottom: 8px;
+}
+
+#paddingElement3 {
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+}
+
+
+@media only screen and (min-width: 1px) and (max-width: 410px) {
     table, thead, tbody, th, td, tr {
         display: block;
     }
@@ -137,6 +152,7 @@ body {
 
     #myInput {
         width: 222px;
+        padding-right: 8px;
     }
 
     #orangefnt {
