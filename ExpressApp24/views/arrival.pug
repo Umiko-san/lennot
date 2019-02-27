@@ -137,8 +137,9 @@ block content
                   - var temp2 = new Date(flightObj.act_d[0])
                   - var dateAct = temp2.setHours(temp2.getHours() + 2)
                   - dateAct = new Date(dateAct).toString().slice(16,21)
-                  - var dateStdFull = temp.setHours(temp.getHours() + 2)
+                  - var dateStdFull = temp.setHours(temp.getHours())
                   - dateStdFull = new Date(parseInt(dateStdFull, 10))
+                  - dateStdFull = dateStdFull.toLocaleString();
                   if z === "undefined"
                     td.CellWithComment
                       p#time                  
