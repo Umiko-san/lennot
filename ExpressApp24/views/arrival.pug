@@ -183,9 +183,14 @@ block content
                       span.CellComment #{dateStdFull}
                   - var h = flightObj.fltnr[0]
                   - var l = new String((flightObj.fltnr[0]).toLowerCase())
+                  - var c = flightObj.route_n_2[0]
+                  - var b = flightObj.route_n_1[0]
                   td.flight
                     a#flightText(href="https://www.flightradar24.com/data/flights/" + l) #{h}
-                  td#destination=flightObj.route_n_1[0]
+                  if c !== ""
+                    td#destination #{b} via #{c}
+                  else
+                    td#destination #{b}
                   - var n = flightObj.bltarea[0]
                   if n === ""
                     td#mobilecolor
