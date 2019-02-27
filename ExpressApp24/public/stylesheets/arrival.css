@@ -43,6 +43,7 @@
     padding-bottom: 8px;
 }
 
+
 @media only screen and (min-width: 1px) and (max-width: 410px) { /*Galaxy S5*/
 
     table, thead, tbody, th, td, tr {
@@ -586,6 +587,26 @@
 /*Ei valmis tabletit*/
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
+    .header {
+        word-break: break-word;
+    }
+
+    #paddingElement {
+        padding-left: 8px;
+    }
+
+    .dpb {
+        display: block;
+    }
+
+    .container {
+        margin: auto;
+    }
+
+    body {
+        padding: 0;
+    }
+
     #myInput {
         width: 222px;
     }
@@ -595,7 +616,7 @@
     }
 
     #limit {
-        width: 62px;
+        width: 84px;
     }
 
     .header{
@@ -605,6 +626,7 @@
         table-layout: fixed;
         width: 100%;
     }
+
 
     #gate {
         font-size: 1.5vw;

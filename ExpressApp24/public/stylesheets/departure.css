@@ -23,6 +23,11 @@ body {
     padding-bottom: 8px;
 }
 
+.container.fluid{
+    margin-top: 0;
+}
+
+
 @media only screen and (min-width: 1px) and (max-width: 410px) {
     table, thead, tbody, th, td, tr {
         display: block;
@@ -389,6 +394,10 @@ body {
         padding: 0;
     }
 
+    #dest{
+        width: 42px;
+    }
+
     .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
         margin-left: 0;
         margin-right: 0;
@@ -412,10 +421,6 @@ body {
 
     #myInput {
         width: 222px;
-    }
-
-    #dest {
-        width: 47px;
     }
 
     #limit {
@@ -634,7 +639,6 @@ body {
     }
 
     .container {
-        padding: 5px;
         margin: auto;
     }
 
@@ -1123,11 +1127,6 @@ body {
 
     /*background-color: #0302B5;*/
 
-    table {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     #paddingElement {
         padding-left: 8px;
     }
@@ -1346,11 +1345,6 @@ body {
 @media only screen and (min-width: 1337px) and (max-width:1920px) { /*Ei valmis*/
 
     /*background-color: #0302B5;*/
-
-    table {
-        margin-left: auto;
-        margin-right: auto;
-    }
 
     #paddingElement {
         padding-left: 8px;
@@ -1571,10 +1565,6 @@ body {
 
     /*background-color: #0302B5;*/
 
-    table {
-        margin-left: auto;
-        margin-right: auto;
-    }
 
     #paddingElement {
         padding-left: 8px;
