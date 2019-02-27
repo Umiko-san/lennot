@@ -21,7 +21,7 @@ var airportEnum = {
     "MHQ": "Maarianhaminan",
     "OUL": "Oulun",
     "POR": "Porin",
-    "ROV": "Rovaniemen",
+    "RVN": "Rovaniemen",
     "SVL": "Savonlinnan",
     "TMP": "Tampere-Pirkkalan",
     "TKU": "Turun",
