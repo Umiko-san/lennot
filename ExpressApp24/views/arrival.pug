@@ -137,16 +137,30 @@ block content
                   - var temp2 = new Date(flightObj.act_d[0])
                   - var dateAct = temp2.setHours(temp2.getHours() + 2)
                   - dateAct = new Date(dateAct).toString().slice(16,21)
+                  - var dateStdFull = temp.setHours(temp.getHours() + 2)
+                  - dateStdFull = new Date(parseInt(dateStdFull, 10))
                   if z === "undefined"
-                    td#time=dateStd
+                    td.CellWithComment
+                      p#time                  
+                        a=dateStd
+                      span.CellComment #{dateStdFull}
                   else if z === "Lähestyy"
-                    td#time=dateStd
+                    td.CellWithComment
+                      p#time                  
+                        a=dateStd
+                      span.CellComment #{dateStdFull}
                       p#early=flightObj.prt_f[0]
                   else if z === "Myöhässä"
-                    td#time=dateStd
+                    td.CellWithComment
+                      p#time                  
+                        a=dateStd
+                      span.CellComment #{dateStdFull}
                       p#delayed="Myöhässä"
                   else if z === "Laskeutunut"
-                    td#time=dateStd
+                    td.CellWithComment
+                      p#time                  
+                        a=dateStd
+                      span.CellComment #{dateStdFull}
                       p#normalTime=flightObj.prt_f[0] + " " + dateAct
                   else if z === "Arvioitu aika"
                     if v !== ""
@@ -156,19 +170,34 @@ block content
                     - var dateEst = temp3.setHours(temp3.getHours() + 2)
                     - dateEst = new Date(dateEst).toString().slice(16,21)
                       if q < p
-                        td#time=dateStd
+                        td.CellWithComment
+                          p#time                  
+                            a=dateStd
+                          span.CellComment #{dateStdFull}
                           p#early=flightObj.prt_f[0] + " " + dateEst
                       else if q > p
-                        td#time=dateStd
+                        td.CellWithComment
+                          p#time                  
+                            a=dateStd
+                          span.CellComment #{dateStdFull}
                           p#delayed=flightObj.prt_f[0] + " " + dateEst
                       else if q == p
-                        td#time=dateStd
-                          p#sameTime=flightObj.prt_f[0] + " " + dateEst
+                          td.CellWithComment
+                            p#time                  
+                              a=dateStd
+                            span.CellComment #{dateStdFull}
+                            p#sameTime=flightObj.prt_f[0] + " " + dateEst
                   else if z === "Peruttu"
-                    td#time=dateStd
-                      p#cnl="Peruttu"
+                        td.CellWithComment
+                          p#time                  
+                            a=dateStd
+                          span.CellComment #{dateStdFull}
+                          p#cnl="Peruttu"
                   else
-                    td#time=dateStd
+                    td.CellWithComment
+                      p#time                  
+                        a=dateStd
+                      span.CellComment #{dateStdFull}
                   - var h = flightObj.fltnr[0]
                   - var l = new String((flightObj.fltnr[0]).toLowerCase())
                   td.flight

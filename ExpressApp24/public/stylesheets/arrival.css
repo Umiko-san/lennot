@@ -2,6 +2,32 @@
     height: auto;
 }
 
+.CellWithComment {
+    position: relative;
+}
+
+.CellComment {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    border: 1px;
+    background-color: black;
+    border-style: solid;
+    font-weight: bold;
+    border-width: 1px;
+    border-color: red;
+    border-radius: 6px;
+    padding: 5px 0;
+    color: #fff;
+    top: 20px;
+    left: 20px;
+}
+
+.CellWithComment:hover span.CellComment {
+    display: block;
+}
+
+
 /*
 .dropdown {
     margin: 20px;
@@ -20,6 +46,10 @@
 
     table, thead, tbody, th, td, tr {
         display: block;
+    }
+
+    .CellWithComment {
+        background-color: #0302B5;
     }
 
     #paddingElement {
