@@ -8,12 +8,12 @@ body {
     background-color: #ffffff;
 }
 
-#paddingMagnifier{
+#paddingMagnifier {
     padding-right: 8px;
 }
 
 #paddingElement2{
-    padding-left: 29.7px;
+    padding-left: 54px;
     padding-bottom: 8px;
 }
 
@@ -22,7 +22,6 @@ body {
     padding-left: 8px;
     padding-bottom: 8px;
 }
-
 
 @media only screen and (min-width: 1px) and (max-width: 410px) {
     table, thead, tbody, th, td, tr {

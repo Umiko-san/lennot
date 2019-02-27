@@ -100,10 +100,10 @@ block content
       p#paddingElement
         i.fas.fa-search#paddingMagnifier
         input#myInput(type='text', onkeyup='myFunction()', placeholder='Hae lennon numerolla tai kohteella', title='Type in a name')
-      p#paddingElement2
-        input#myCheck(type='checkbox', onclick='checkboxFunction()')
-        label.form-check-label(for='myCheck') Piilota lähteneet lennot
-      p
+      .custom-control.custom-checkbox.mr-sm-2#paddingElement2
+        input#myCheck.custom-control-input(type='checkbox', onclick='checkboxFunction()')
+        label.custom-control-label(for='myCheck') Piilota lähteneet lennot
+    br
     .container.fluid
       .table-responsive
         table#myTable.table.table-hover
