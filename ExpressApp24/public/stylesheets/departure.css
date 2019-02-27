@@ -172,7 +172,10 @@ body {
         color: #ffffff;
         background-color: #F29401;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -183,7 +186,10 @@ body {
         color: #ffffff;
         background-color: #358F38;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -194,7 +200,10 @@ body {
         color: #ffffff;
         background-color: #E2001A;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -243,8 +252,10 @@ body {
         color: #000000;
         align-self: center;
         padding: 5px;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #delayed {
@@ -254,8 +265,10 @@ body {
         background-color: #F29401;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #normalTime {
@@ -265,8 +278,10 @@ body {
         background-color: #ffffff;
         color: #000000;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #early {
@@ -276,8 +291,10 @@ body {
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #center {
@@ -372,9 +389,13 @@ body {
 }
 
 @media only screen and (min-width: 411px) and (max-width: 575px) {
-    
+
     .header {
-        word-break: break-word;
+        /* For Firefox */
+        white-space: pre-wrap;
+        word-break: break-all;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         font-size: 10px;
     }
 
@@ -436,7 +457,10 @@ body {
         color: #ffffff;
         background-color: #F29401;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 1px;
         border: 1px solid black;
     }
@@ -447,7 +471,10 @@ body {
         color: #ffffff;
         background-color: #358F38;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 1px;
         border: 1px solid black;
     }
@@ -458,7 +485,10 @@ body {
         color: #ffffff;
         background-color: #E2001A;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 1px;
         border: 1px solid black;
     }
@@ -519,7 +549,10 @@ body {
         background-color: #ffffff;
         color: #000000;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #early {
@@ -529,7 +562,10 @@ body {
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #center {
@@ -624,7 +660,11 @@ body {
 @media only screen and (min-width: 576px) and (max-width: 768px) {
 
     .header {
-        word-break: break-word;
+        /* For Firefox */
+        white-space: pre-wrap;
+        word-break: break-all;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #paddingElement {
@@ -680,7 +720,10 @@ body {
         color: #ffffff;
         background-color: #F29401;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -691,7 +734,10 @@ body {
         color: #ffffff;
         background-color: #358F38;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -702,7 +748,10 @@ body {
         color: #ffffff;
         background-color: #E2001A;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -743,8 +792,10 @@ body {
         color: #000000;
         align-self: center;
         padding: 5px;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #delayed {
@@ -754,8 +805,10 @@ body {
         background-color: #F29401;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #normalTime {
@@ -765,8 +818,10 @@ body {
         background-color: #ffffff;
         color: #000000;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #early {
@@ -776,8 +831,10 @@ body {
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #center {
@@ -827,14 +884,20 @@ body {
     #destination {
         font-size: 1.5vw;
         color: #E3EE8E /*#EBFCA0*/;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         font-weight: bold;
     }
 
     #destinationNotFound {
         font-size: 1.5vw;
         color: #E3EE8E /*#EBFCA0*/;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         font-weight: bold;
         text-align: justify;
     }
@@ -873,7 +936,11 @@ body {
 @media only screen and (min-width:769px) and (max-width:1024px){
 
     .header {
-        word-break: break-word;
+        /* For Firefox */
+        white-space: pre-wrap;
+        word-break: break-all;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #paddingElement {
@@ -929,7 +996,10 @@ body {
         color: #ffffff;
         background-color: #F29401;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -940,7 +1010,10 @@ body {
         color: #ffffff;
         background-color: #358F38;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -951,7 +1024,10 @@ body {
         color: #ffffff;
         background-color: #E2001A;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -992,8 +1068,10 @@ body {
         color: #000000;
         align-self: center;
         padding: 5px;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #delayed {
@@ -1003,8 +1081,10 @@ body {
         background-color: #F29401;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #normalTime {
@@ -1014,8 +1094,10 @@ body {
         background-color: #ffffff;
         color: #000000;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #early {
@@ -1025,8 +1107,10 @@ body {
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #center {
@@ -1076,14 +1160,20 @@ body {
     #destination {
         font-size: 1.75vw;
         color: #E3EE8E /*#EBFCA0*/;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         font-weight: bold;
     }
 
     #destinationNotFound {
         font-size: 1.75vw;
         color: #E3EE8E /*#EBFCA0*/;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         font-weight: bold;
         text-align: justify;
     }
@@ -1148,7 +1238,10 @@ body {
         color: #ffffff;
         background-color: #F29401;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -1159,7 +1252,10 @@ body {
         color: #ffffff;
         background-color: #358F38;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -1170,7 +1266,10 @@ body {
         color: #ffffff;
         background-color: #E2001A;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -1211,9 +1310,11 @@ body {
         color: #000000;
         align-self: center;
         padding: 5px;
-        -ms-word-break: break-all;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #delayed {
@@ -1223,8 +1324,10 @@ body {
         background-color: #F29401;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #normalTime {
@@ -1234,8 +1337,10 @@ body {
         background-color: #ffffff;
         color: #000000;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #early {
@@ -1245,8 +1350,10 @@ body {
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #center {
@@ -1296,14 +1403,20 @@ body {
     #destination {
         font-size: 1.75vw;
         color: #E3EE8E /*#EBFCA0*/;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         font-weight: bold;
     }
 
     #destinationNotFound {
         font-size: 1.75vw;
         color: #E3EE8E /*#EBFCA0*/;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         font-weight: bold;
         text-align: justify;
     }
@@ -1339,7 +1452,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 1337px) and (max-width:1920px) { /*Ei valmis*/
+@media only screen and (min-width: 1337px) and (max-width:1680px) { /*Ei valmis*/
 
     /*background-color: #0302B5;*/
 
@@ -1368,7 +1481,10 @@ body {
         color: #ffffff;
         background-color: #F29401;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -1379,7 +1495,10 @@ body {
         color: #ffffff;
         background-color: #358F38;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -1390,7 +1509,10 @@ body {
         color: #ffffff;
         background-color: #E2001A;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
@@ -1431,8 +1553,10 @@ body {
         color: #000000;
         align-self: center;
         padding: 5px;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #delayed {
@@ -1442,8 +1566,10 @@ body {
         background-color: #F29401;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #normalTime {
@@ -1453,8 +1579,10 @@ body {
         background-color: #ffffff;
         color: #000000;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #early {
@@ -1464,8 +1592,10 @@ body {
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #center {
@@ -1515,14 +1645,20 @@ body {
     #destination {
         font-size: 1vw;
         color: #E3EE8E /*#EBFCA0*/;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         font-weight: bold;
     }
 
     #destinationNotFound {
         font-size: 1vw;
         color: #E3EE8E /*#EBFCA0*/;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         font-weight: bold;
         text-align: justify;
     }
@@ -1558,7 +1694,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 1921px) { /*Ei valmis*/
+@media only screen and (min-width: 1681px) { /*Ei valmis*/
 
     /*background-color: #0302B5;*/
 
@@ -1577,46 +1713,55 @@ body {
     }
 
     #orangefnt {
-        font-size: 0.7vw;
+        font-size: 16px;
         color: #F6A400;
         font-weight: bold;
     }
 
     #orange {
-        font-size: 0.7vw;
+        font-size: 16px;
         font-weight: bold;
         color: #ffffff;
         background-color: #F29401;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
 
     #green {
-        font-size: 0.7vw;
+        font-size: 16px;
         font-weight: bold;
         color: #ffffff;
         background-color: #358F38;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
 
     #red {
-        font-size: 0.7vw;
+        font-size: 16px;
         font-weight: bold;
         color: #ffffff;
         background-color: #E2001A;
         align-self: center;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         padding: 5px;
         border: 1px solid black;
     }
 
     #gate {
-        font-size: 0.7vw;
+        font-size: 16px;
         color: #ffffff;
         border: 2px solid white;
         font-weight: bold;
@@ -1629,7 +1774,7 @@ body {
     }
 
     #belt {
-        font-size: 0.7vw;
+        font-size: 16px;
         border: 2px solid #151D41;
         background-color: #151D41;
         color: #F2ED77;
@@ -1644,48 +1789,56 @@ body {
     /*fonts*/
 
     #departed {
-        font-size: 0.7vw;
+        font-size: 16px;
         border: 1px solid black;
         font-weight: bold;
         background-color: #ffffff;
         color: #000000;
         align-self: center;
         padding: 5px;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #delayed {
-        font-size: 0.7vw;
+        font-size: 16px;
         border: 1px solid black;
         font-weight: bold;
         background-color: #F29401;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #normalTime {
-        font-size: 0.7vw;
+        font-size: 16px;
         border: 1px solid black;
         font-weight: bold;
         background-color: #ffffff;
         color: #000000;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #early {
-        font-size: 0.7vw;
+        font-size: 16px;
         border: 1px solid black;
         font-weight: bold;
         background-color: #358F38;
         color: #ffffff;
         align-self: center;
-        word-break: break-word;
-        min-width: 50px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
     }
 
     #center {
@@ -1698,14 +1851,14 @@ body {
 
     /*oranssi on #F29401*/
     #atcAir {
-        font-size: 0.7vw;
+        font-size: 16px;
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
         vertical-align: super;
     }
 
     .flight {
-        font-size: 0.7vw;
+        font-size: 16px;
         color: #ffffff /*#EBFCA0*/;
         /*background-color: #0302B5;*/
         font-weight: bold;
@@ -1713,7 +1866,7 @@ body {
 
     #flightText {
         text-decoration: none;
-        font-size: 0.7vw;
+        font-size: 16px;
         font-weight: bold;
         text-align: center;
         align-content: center;
@@ -1726,36 +1879,42 @@ body {
     }
 
     #time {
-        font-size: 0.7vw;
+        font-size: 16px;
         color: #E3EE8E /*#EBFCA0*/;
         padding-bottom: 0px;
         font-weight: bold;
     }
 
     #destination {
-        font-size: 0.7vw;
+        font-size: 16px;
         color: #E3EE8E /*#EBFCA0*/;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         font-weight: bold;
     }
 
     #destinationNotFound {
-        font-size: 0.7vw;
+        font-size: 16px;
         color: #E3EE8E /*#EBFCA0*/;
-        word-break: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        /* For Chrome and IE */
+        word-wrap: break-word;
         font-weight: bold;
         text-align: justify;
     }
 
     #registration {
-        font-size: 0.7vw;
+        font-size: 16px;
         color: #ffffff /*#EBFCA0*/;
         font-weight: bold;
         vertical-align: super;
     }
 
     #linkText {
-        font-size: 0.7vw;
+        font-size: 16px;
         font-weight: bold;
         vertical-align: super;
     }
@@ -1881,8 +2040,8 @@ body {
 
 /* Style the checkmark/indicator */
 .conttainer .checkmark:after {
-    left: 9px;
-    top: 5px;
+    left: 7.75px;
+    top: 4.5px;
     width: 5px;
     height: 10px;
     border: solid white;
