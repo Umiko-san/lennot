@@ -1819,7 +1819,7 @@ body {
     padding: 5px 0;
     color: #fff;
     top: 10px; /*20*/
-    left: 20px; /*20*/
+    left: 10px; /*20*/
 }
 
 .CellWithComment2:hover span.CellComment2 {
