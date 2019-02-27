@@ -6,7 +6,7 @@ var parseString = require('xml2js').parseString;
 var myResponse = null;
 
 var airportEnum = {
-    "ENO": "Enontekiön",
+    "ENF": "Enontekiön",
     "HEL": "Helsinki-Vantaan",
     "IVL": "Ivalon",
     "JOE": "Joensuun",
