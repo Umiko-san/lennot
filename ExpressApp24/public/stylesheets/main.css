@@ -52,13 +52,21 @@ img {
     }
 
     .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
-        margin-left: 0;
+        margin-left: 0px; /*0*/
         margin-right: 100px;
         margin-bottom: 0;
     }
 
+    .fas.fa-home{
+        padding-left: 8px;
+    }
+
+    .nav-item {
+        padding-left: 36px;
+    }
+
     .dropdown {
-        margin: 0px;
+        margin: 0px; /*0px*/
     }
 
     .dropdown-menu {
@@ -110,6 +118,13 @@ img {
         overflow-y: auto;
     }
 
+    .fas.fa-home {
+        padding-left: 8px;
+    }
+
+    .nav-item {
+        padding-left: 36px;
+    }
 
     .fill {
         min-height: 100%;
@@ -146,6 +161,14 @@ img {
         margin-bottom: 0;
     }
 
+    .fas.fa-home {
+        padding-left: 8px;
+    }
+
+    .nav-item {
+        padding-left: 36px;
+    }
+
     .dropdown {
         margin: 0px;
     }
@@ -167,11 +190,18 @@ img {
     
 }
 
-@media only screen and (min-width: 614px) { /*Galaxy S5*/
-
+@media only screen and (min-width: 614px) and (max-width: 767px) { /*Galaxy S5*/
 
 
     .form-group.mb-3 {
         margin-top: 3px;
+    }
+
+    .fas.fa-home {
+        padding-left: 8px;
+    }
+
+    .nav-item {
+        padding-left: 36px;
     }
 }
