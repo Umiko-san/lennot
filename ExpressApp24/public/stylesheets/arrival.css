@@ -20,7 +20,7 @@
     padding: 5px 0;
     color: #fff;
     top: 5px; /*20*/
-    left: 50px; /*20*/
+    left: 20px; /*20*/
 }
 
 .CellWithComment:hover span.CellComment {
