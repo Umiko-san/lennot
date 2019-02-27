@@ -264,10 +264,16 @@ block content
                   - var q = flightObj.chkdsk_2[0]
                   - var o = flightObj.chkarea[0]
                   if o !== "" && o.length === 1 && o !== "undefined"
-                    td#destination="T" + flightObj.chkarea[0]
-                      details#detail
-                        summary
-                        p Bag drop #{z} - #{q}
+                    if q === ""
+                      td#destination="T" + flightObj.chkarea[0]
+                        details#detail
+                          summary
+                          p Bag drop #{z}
+                    else
+                      td#destination="T" + flightObj.chkarea[0]
+                        details#detail
+                          summary
+                          p Bag drop #{z} - #{q}
                   else if o !== ""
                     td#destination=flightObj.chkarea[0]
                   else
