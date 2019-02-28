@@ -13,7 +13,14 @@ var departure = require('./routes/departure');
 var airport = require('./routes/airport');
 var airline = require('./routes/airline');
 var contact = require('./routes/contact');
+
+//käyttäjän autentikointi
+var auth = require('./auth');
+
 var app = express();
+
+//käytä middlewarea
+app.use(auth);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

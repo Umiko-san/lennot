@@ -32,6 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="auth.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes\airline.js">
       <SubType>Code</SubType>
     </Compile>
