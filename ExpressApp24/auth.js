@@ -14,7 +14,7 @@ const admins = {
 module.exports = function (request, response, next) {
     var user = auth(request);
     if (!user || !admins[user.name] || admins[user.name].password !== user.pass) {
-        response.set('WWW-Authenticate', 'Basic realm="Toimenpiteitä vaaditaan! Salasana on kurssin tunnus (UEFin tai Karelian kay), kayttajatunnusta ei tarvita. Tervetuloa"');
+        response.set('WWW-Authenticate', 'Basic realm="Toimenpiteita vaaditaan! Salasana on kurssin tunnus (UEFin tai Karelian kay), kayttajatunnusta ei tarvita. Tervetuloa"');
         return response.status(401).send();
     }
     return next();
