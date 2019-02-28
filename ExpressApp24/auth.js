@@ -3,6 +3,8 @@
 const admins = {
     '': { password: 'LTD7008' },
     '': { password: 'LTD 7008' },
+    '': { password: 'ltd7008' },
+    '': { password: 'ltd 7008' },
     '': { password: '3621425' },
     'admin': { password: '4321' }
 
