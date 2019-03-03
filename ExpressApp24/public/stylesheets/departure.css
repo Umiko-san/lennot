@@ -328,17 +328,19 @@ body {
         font-size: 6vw;
         font-weight: bold;
         text-align: center;
-        align-content: center;
+        vertical-align: text-bottom;
         color: white;
+        background-color: #0302B5;
     }
 
     #flightText2 {
         text-decoration: none;
         font-size: 6vw;
         font-weight: bold;
-        text-align: left;
-        align-content: center;
+        text-align: center;
+        vertical-align: text-bottom;
         color: white;
+        background-color: #0302B5;
     }
 
     .main {
@@ -1418,7 +1420,7 @@ body {
 
     #flightText {
         text-decoration: none;
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         font-weight: bold;
         text-align: center;
         align-content: center;
@@ -1427,7 +1429,7 @@ body {
 
     #flightText2 {
         text-decoration: none;
-        font-size: 1.5vw;
+        font-size: 1.75vw;
         font-weight: bold;
         text-align: left;
         align-content: center;
