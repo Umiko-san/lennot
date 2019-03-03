@@ -635,6 +635,10 @@ body {
         width: 50px;
     }
 
+    #term{
+        width: 20px;
+    }
+
     #destination {
         font-size: 2vw;
         color: #E3EE8E /*#EBFCA0*/;
