@@ -1,0 +1,237 @@
+﻿extends layout
+//-
+  value='hel' Helsinki valittuna valmiiksi
+block content
+  head
+    title Bootstrap Example
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.1/css/all.css')
+    link(rel='stylesheet', href='stylesheets/main.css')
+    link(rel='stylesheet', href='stylesheets/security.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js')
+    script.
+      $(document).on('click',function(){
+      $('.collapse').collapse('hide');
+      })
+      function getString(s) { return s.slice(0,2) + "-" + s.slice(3); };
+  body
+    nav.navbar.navbar-expand-md.bg-dark.navbar-dark.container
+      a.navbar-brand(href='/')
+        i.fas.fa-home  Lennot
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+        span.navbar-toggler-icon
+      #collapsibleNavbar.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='/airline') Lentoyhtiöt
+          li.nav-item
+            a.nav-link(href='/airport') Lentoasemat
+          li.nav-item
+            a.nav-link(href='/security') Turvatarkastus
+          li.nav-item
+            a.nav-link(href='/contact') Ota yhteyttä
+    br
+    .container.main
+      br
+      h2#padding Helsinki-Vantaan lentoaseman turvatarkastuksen jonotusajat
+      p#padding
+        strong Jonotusajan mittaaminen:
+        |  Helsinki-Vantaan lentoaseman turvatarkastusalueilla on antureita
+        |  jotka poimivat asiakkaiden päätelaitteiden bluetooth-signaaleja.
+        #accordion
+          .card
+            .card-header
+              a.card-link(data-toggle='collapse', href='#collapseOne')
+                h4#open
+                  | T2 
+                span#headers
+                  | Jonotusaika:
+                span#boldThis
+                  |  #{b} 
+                br
+                span#headers
+                  | Näytteet: 
+                |  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{bs}
+                br
+                span#headers
+                  | Päivitetty: 
+                | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{bt}
+            #collapseOne.collapse.link(data-parent='#accordion')
+              .card-body
+                img(src='/images/T2.jpg', alt='Smiley face', width='700', height='auto')
+              ul
+                li Maanantai - perjantai: 00:00 - 23:59
+                li Lauantai:  00:00 - 23:59
+                li Sunnuntai: 00:00 - 23:59
+          .card
+            .card-header
+              a.card-link(data-toggle='collapse', href='#collapseTwo')
+                - var e = opencheck
+                if e === ""
+                  h4
+                    | T2 
+                  span#headers
+                    | Jonotusaika:
+                  span#boldThis
+                    |  #{d} 
+                  br
+                  span#headers
+                    | Näytteet: 
+                  |  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{ds}
+                  br
+                  span#headers
+                    | Päivitetty: 
+                  | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{dt}
+                else if e === "False"
+                  h4#open
+                    | T2 Sivu
+                  span#headers
+                    | Jonotusaika:
+                  span#boldThis
+                    |  #{d} 
+                  br
+                  span#headers
+                    | Näytteet: 
+                  |  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{ds}
+                  br
+                  span#headers
+                    | Päivitetty: 
+                  | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{dt}
+                else if e === "False"
+                  h4#open
+                    | T2 Sivu＊
+                  span#headers
+                    | Jonotusaika:
+                  span#boldThis
+                    |  #{d} 
+                  br
+                  span#headers
+                    | Näytteet: 
+                  |  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{ds}
+                  br
+                  span#headers
+                    | Päivitetty: 
+                  | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{dt}
+            #collapseTwo.collapse.link(data-parent='#accordion')
+              .card-body
+                img(src='/images/T2sivu.jpg', alt='Smiley face', width='700', height='auto')
+              ul
+                li Palvelu on bag drop tiskin 269 vieressä.
+                li ＊Tarkista aukioloajat yöaikoina.
+          .card
+            .card-header
+              a.card-link(data-toggle='collapse', href='#collapseThree')
+                - var g = opent
+                if g === ""
+                  h4
+                    | T2 Premium Lane
+                  span#headers
+                    | Jonotusaika:
+                  span#boldThis
+                    |  #{c} 
+                  br
+                  span#headers
+                    | Näytteet: 
+                  |  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{cs}
+                  br
+                  span#headers
+                    | Päivitetty: 
+                  | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{ct}
+                else if g === "Suljettu"
+                  h4#closed
+                    | T2 Premium Lane  [#{opent}]
+                  span#headers
+                    | Jonotusaika:
+                  span#boldThis
+                    |  #{c}
+                  br
+                  span#headers
+                    | Näytteet: 
+                  |  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{cs}
+                  br
+                  span#headers
+                    | Päivitetty: 
+                  | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{ct}
+                else if g === "Avoinna"
+                  h4#open
+                    | T2 Premium Lane
+                  span#headers
+                    | Jonotusaika:
+                  span#boldThis
+                    |  #{c} 
+                  br
+                  span#headers
+                    | Näytteet: 
+                  |  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{cs}
+                  br
+                  span#headers
+                    | Päivitetty: 
+                  | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{ct}
+            #collapseThree.collapse.link(data-parent='#accordion')
+              .card-body
+                img(src='/images/premium_lane.jpg', alt='Smiley face', width='700', height='auto')
+              ul
+                li Tarkista kelpoisuus käyttämäsi lentoyhtiön palkinto-ohjelmasta tai tarkistuskortistasi
+                li Maanantai - perjantai: 05:00 - 09:00 ja 12:30 - 17:30
+                li Lauantai:  05:00 - 09:00 ja 14:00 - 18:00
+                li Sunnuntai: 05:00 - 09:00 ja 14:00 - 18:00
+          .card
+            .card-header
+              a.card-link(data-toggle='collapse', href='#collapseFour')
+                - var f = opencheck
+                if f === ""
+                  h4
+                    | T1 
+                  span#headers
+                    | Jonotusaika:
+                  span#boldThis
+                    |  #{a} 
+                  br
+                  span#headers
+                    | Näytteet: 
+                  |  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{as}
+                  br
+                  span#headers
+                    | Päivitetty: 
+                  | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{at}
+                else if f === "False"
+                  h4#open
+                     | T1 
+                  span#headers
+                    | Jonotusaika:
+                  span#boldThis
+                    |  #{a} 
+                  br
+                  span#headers
+                    | Näytteet: 
+                  |  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{as}
+                  br
+                  span#headers
+                    | Päivitetty: 
+                  | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{at}
+                else if f === "True"
+                  h4#check
+                     | T1＊
+                  span#headers
+                    | Jonotusaika:
+                  span#boldThis
+                    |  #{a} 
+                  br
+                  span#headers
+                    | Näytteet: 
+                  |  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{as}
+                  br
+                  span#headers
+                    | Päivitetty: 
+                  | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp #{at}
+            #collapseFour.collapse.link(data-parent='#accordion')
+              .card-body
+                img(src='/images/T1.jpg', alt='Smiley face', width='700', height='auto')
+              ul
+                li T1 Premium lane avoinna on ruuhka-aikoina.
+                li ＊Palvelussa on katkoksia yöaikaan.
+      br

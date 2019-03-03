@@ -51,6 +51,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes\index.js" />
+    <Compile Include="routes\security.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Content Include="package.json" />
     <Content Include="Procfile" />
     <Content Include="public\stylesheets\airline.css">
@@ -69,6 +72,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\stylesheets\main.css" />
+    <Content Include="public\stylesheets\security.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="README.md" />
     <Content Include="views\airline.pug">
       <SubType>Code</SubType>
@@ -88,6 +94,9 @@
     <Content Include="views\index.pug" />
     <Content Include="views\layout.pug" />
     <Content Include="views\error.pug" />
+    <Content Include="views\security.pug">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />

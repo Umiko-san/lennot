@@ -13,6 +13,7 @@ var departure = require('./routes/departure');
 var airport = require('./routes/airport');
 var airline = require('./routes/airline');
 var contact = require('./routes/contact');
+var security = require('./routes/security');
 
 //käyttäjän autentikointi
 var auth = require('./auth');
@@ -41,6 +42,7 @@ app.use('/arrival', arrival);
 app.use('/airport', airport);
 app.use('/airline', airline);
 app.use('/contact', contact);
+app.use('/security', security);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
