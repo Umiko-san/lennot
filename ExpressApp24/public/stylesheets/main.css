@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 0px; /*was 50px*/
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-image: url(../images/finnair_tausta.jpg);
     width: 100%;
@@ -145,10 +145,9 @@ img {
     }
 
     .container {
-        padding: 0;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 20px;
+        margin-bottom: 0;
     }
 
     body {
@@ -191,6 +190,15 @@ img {
 
 @media only screen and (min-width: 614px) and (max-width: 767px) { /*Galaxy S5*/
 
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    body {
+        padding: 0;
+    }
 
     .form-group.mb-3 {
         margin-top: 3px;
