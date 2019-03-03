@@ -440,7 +440,7 @@
     }
 
     #gate {
-        font-size: 2.00vw;
+        font-size: 1.70vw;
         color: #ffffff;
         border: 2px solid white;
         font-weight: bold;
@@ -459,11 +459,11 @@
         align-self: center;
         padding: 5px;
     }
+
+
     /*#0302B5 depboard*/
     /*#F5FE3F gate*/
-
     /*fonts*/
-
     #arrived {
         font-size: 2.00vw;
         border: 1px solid black;
