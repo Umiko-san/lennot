@@ -76,7 +76,52 @@ function security_callback(error, response, body) {
 
     }
     catch (error) {
-        console.log("Todays error is " + error);
+        z = body;
+        y = JSON.parse(z);
+        console.log(y.data.securityQueues);
+        a1 = time(y.data.securityQueues[0].dwellTimeInSeconds);
+        b1 = time(y.data.securityQueues[1].dwellTimeInSeconds);
+        c1 = time(y.data.securityQueues[2].dwellTimeInSeconds);
+        d1 = time(y.data.securityQueues[3].dwellTimeInSeconds);
+
+        a2 = y.data.securityQueues[0].lastUpdate;
+        b2 = y.data.securityQueues[1].lastUpdate;
+        c2 = y.data.securityQueues[2].lastUpdate;
+        d2 = y.data.securityQueues[3].lastUpdate;
+
+        temp11 = new Date(a2);
+        date11 = temp11.setHours(temp11.getHours() + 2);
+        date11 = new Date(date11).toString().slice(16, 21);
+        a2 = date11;
+
+        temp22 = new Date(b2);
+        date22 = temp22.setHours(temp22.getHours() + 2);
+        date22 = new Date(date22).toString().slice(16, 21);
+        b2 = date22;
+
+        temp33 = new Date(c2);
+        date33 = temp33.setHours(temp33.getHours() + 2);
+        date33 = new Date(date33).toString().slice(16, 21);
+        c2 = date33;
+
+        temp44 = new Date(d2);
+        date44 = temp44.setHours(temp44.getHours() + 2);
+        date44 = new Date(date44).toString().slice(16, 21);
+        d2 = date44;
+
+        a3 = y.data.securityQueues[0].sampleCount;
+        b3 = y.data.securityQueues[1].sampleCount;
+        c3 = y.data.securityQueues[2].sampleCount;
+        d3 = y.data.securityQueues[3].sampleCount;
+
+        console.log(a1);
+        console.log(b1);
+        console.log(c1);
+        console.log(d1);
+        console.log(a2);
+        console.log(b2);
+        console.log(c2);
+        console.log(d2);
     }
 }
 
@@ -184,9 +229,9 @@ router.get('/', function (req, res) {
             }
         }
 
-        console.log("rendering page open is " + open);
-        console.log("orangeCheck is " + orangeCheck);
-        console.log("d2 is " + d2)
+        //console.log("rendering page open is " + open);
+        //console.log("orangeCheck is " + orangeCheck);
+        //console.log("d2 is " + d2)
         if (a1 === "" || d2 === "" || open === "") {
             setTimeout(function () {
                 res.render('security', { title: 'Express', a: a1, b: b1, c: c1, d: d1, at: a2, bt: b2, ct: c2, dt: d2, opent: open, as: a3, bs: b3, cs: c3, ds: d3, opencheck: orangeCheck });
