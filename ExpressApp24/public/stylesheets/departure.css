@@ -631,6 +631,10 @@ body {
         font-weight: bold;
     }
 
+    #dest{
+        width: 50px;
+    }
+
     #destination {
         font-size: 2vw;
         color: #E3EE8E /*#EBFCA0*/;
