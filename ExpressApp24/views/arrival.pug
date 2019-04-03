@@ -155,10 +155,10 @@ block content
                   - var z = flightObj.prt_f[0]
                   - var v = flightObj.est_d[0]
                   - var temp = new Date(flightObj.sdt[0])
-                  - var dateStd = temp.setHours(temp.getHours() + 2)
+                  - var dateStd = temp.setHours(temp.getHours() + 3)
                   - dateStd = new Date(dateStd).toString().slice(16,21)
                   - var temp2 = new Date(flightObj.act_d[0])
-                  - var dateAct = temp2.setHours(temp2.getHours() + 2)
+                  - var dateAct = temp2.setHours(temp2.getHours() + 3)
                   - dateAct = new Date(dateAct).toString().slice(16,21)
                   - var dateStdFull = temp.setHours(temp.getHours())
                   - dateStdFull = new Date(parseInt(dateStdFull, 10))
@@ -183,7 +183,7 @@ block content
                     - var q = new Date(flightObj.est_d[0]).getTime()
                     - var p = new Date(flightObj.sdt[0]).getTime()
                     - var temp3 = new Date(flightObj.est_d[0])
-                    - var dateEst = temp3.setHours(temp3.getHours() + 2)
+                    - var dateEst = temp3.setHours(temp3.getHours() + 3)
                     - dateEst = new Date(dateEst).toString().slice(16,21)
                       if q < p
                         td.CellWithComment#time=dateStd
